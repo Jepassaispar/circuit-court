@@ -1,0 +1,73 @@
+/* 
+
+//////////////COLORS//////////////
+
+YELLOW: rgb(251,191,45) / #FBBF2D
+ORANGE: rgb(243, 153, 5) /
+GREEN: rgb(8,129,138) / #08818A
+DARK-BLUE: rgb(47,93,168) / #2F5DA8
+LIGHT-BLUE: rgb(72,123,189) / #487BBD
+GREEN-GRAY: rgb(173,213,176) / #ADD5B0
+PINK: rgb(249,204,211) / #F9CCD3
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* 
+Prevents blue ugly box from appearing when user click on anything
+*/
+*:focus {
+  outline: none;
+}
+
+#logoContainer,
+#mainNav,
+#logoPart2 {
+  display: flex;
+}
+
+/* //////////////MAINNAV////////////// */
+
+#mainNav {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 2px 2px gray;
+  padding: 5px 1em;
+  background-color: rgb(243, 153, 5);
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  padding-right: 1em;
+  font-size: 1.2em;
+}
+
+/* //////////////LOGO////////////// */
+
+#logoContainer {
+  color: #08818a;
+}
+
+#logoPart1,
+#logoPart2 {
+  margin-bottom: -10px;
+}
+
+#logoPart1 {
+  font-size: 3em;
+  margin-top: -6px;
+  font-weight: bold;
+}
+
+#logoPart2 {
+  flex-direction: column;
+  font-size: 1.4em;
+  line-height: 1em;
+}

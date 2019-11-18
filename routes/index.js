@@ -3,13 +3,14 @@ const router = express();
 
 router.get("/", (req, res) => {
   res.render("index", {
-    css: "homeStyle"
+    css: ["baseStyle", "index"]
   });
 });
 
 router.get("/mainPage", (req, res) => {
   res.render("mainPage", {
-    js: "app"
+    js: "app",
+    css: ["baseStyle", "index"]
   });
 });
 
