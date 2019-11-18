@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    margin: 3vw;
+
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.items {
+    padding: 5%;
+}
+
+#map {
+
+    position: sticky !important;
+    left: 0;
+    top: 03vw;
+    height: 85vh;
+    min-height: 500px;
+    min-width: 500px;
+}
