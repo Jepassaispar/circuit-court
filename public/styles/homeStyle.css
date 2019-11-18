@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+#logoContainer,
+#logoPart2 {
+    display: flex;
+    font-size: 3em;
+}
+
+#logoPart1 {}
+
+#logoPart2 {
+    flex-direction: column;
+}
