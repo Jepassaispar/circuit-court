@@ -1,0 +1,18 @@
+#mainContainer,
+#firsHalfContainer,
+#descriptionContainer {
+    display: flex;
+}
+
+#mainContainer,
+#descriptionContainer {
+    flex-direction: column;
+}
+
+#pictureContainer {
+    width: 50vw;
+}
+
+#homePic {
+    height: 50vh;
+}
