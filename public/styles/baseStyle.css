@@ -37,9 +37,9 @@ Prevents blue ugly box from appearing when user click on anything
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 2px 2px 2px 2px gray;
+  box-shadow: 1px 1px 2px 2px rgb(153, 118, 30);
   padding: 5px 1em;
-  background-color: rgb(243, 153, 5);
+  background-color: #fbbf2d;
 }
 
 .link {
@@ -70,4 +70,23 @@ Prevents blue ugly box from appearing when user click on anything
   flex-direction: column;
   font-size: 1.4em;
   line-height: 1em;
+}
+
+.btn {
+  font-size: 2em;
+  width: 20vw;
+  min-width: 200px;
+  border: none;
+  background-color: rgb(251, 191, 45);
+  color: white;
+  border-radius: 50px;
+  transform: scale(1);
+  transition: all 1s ease;
+  box-shadow: 3px 3px 0px 0px rgb(82, 72, 48);
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: rgb(243, 153, 5);
 }
