@@ -3,7 +3,8 @@ const router = express();
 
 router.get("/", (req, res) => {
   res.render("index", {
-    css: ["baseStyle", "index"]
+    js: "app",
+    css: ["homeStyle", "index"]
   });
 });
 
