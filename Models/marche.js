@@ -3,10 +3,7 @@ const Schema = mongoose.Schema;
 
 const marcheSchema = new Schema({
   name: String,
-  location: {
-    type: [Number], // longitude, latitude
-    index: "2d"
-  },
+  location: { type: { type: String }, coordinates: [Number] },
   bio: Boolean,
   lieu: {
     adress: String,
@@ -31,5 +28,6 @@ const marcheSchema = new Schema({
   }
 });
 
+marcheSchema.index({ location: "2dsphere" });
 const Marche = mongoose.model("Marche", marcheSchema);
 module.exports = Marche;

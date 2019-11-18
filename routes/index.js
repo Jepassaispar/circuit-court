@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 router.get("/mainPage", (req, res) => {
   res.render("mainPage", {
     js: "app",
-    css: ["baseStyle", "index", "mainPage"]
+    css: ["baseStyle", "mainPage"]
   });
 });
 

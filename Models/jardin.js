@@ -3,10 +3,7 @@ const Schema = mongoose.Schema;
 
 const jardinSchema = new Schema({
   name: String,
-  location: {
-    type: [Number], // longitude, latitude
-    index: "2d"
-  },
+  location: { type: { type: String }, coordinates: [Number] },
   bio: Boolean,
   lieu: {
     adress: String,
@@ -30,6 +27,8 @@ const jardinSchema = new Schema({
     default: ""
   }
 });
+
+jardinSchema.index({ location: "2dsphere" });
 
 const Jardin = mongoose.model("Jardin", jardinSchema);
 module.exports = Jardin;

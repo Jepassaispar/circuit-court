@@ -2,8 +2,8 @@ module.exports = [
   {
     name: "Amap Du Marais",
     location: {
-      type: [48.867402, 2.356607], // longitude, latitude
-      index: "2d"
+      type: "Point",
+      coordinates: [48.867402, 2.356607] // longitude, latitude
     },
     bio: true,
     lieu: {
@@ -27,8 +27,8 @@ module.exports = [
   {
     name: "AMAP Ménil'sème",
     location: {
-      type: [48.866202, 2.394171], // longitude, latitude
-      index: "2d"
+      type: "Point",
+      coordinates: [48.866202, 2.394171] // longitude, latitude
     },
     bio: true,
     lieu: {
@@ -53,8 +53,8 @@ module.exports = [
   {
     name: "AMAP Trognons de la Nation",
     location: {
-      type: [48.848376, 2.37966], // longitude, latitude
-      index: "2d"
+      type: "Point",
+      coordinates: [48.848376, 2.37966] // longitude, latitude
     },
     bio: true,
     lieu: {

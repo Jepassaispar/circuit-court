@@ -2,8 +2,8 @@ module.exports = [
   {
     name: "Marché bio de La Halle Aubervilliers",
     location: {
-      type: [48.88999, 2.37151], // longitude, latitude
-      index: "2d"
+      type: "Point",
+      coordinates: [48.88999, 2.37151] // longitude, latitude
     },
     bio: true,
     lieu: {
@@ -28,8 +28,8 @@ module.exports = [
   {
     name: "Marché biologique de Brancusi",
     location: {
-      type: [48.836987, 2.320946], // longitude, latitude
-      index: "2d"
+      type: "Point",
+      coordinates: [48.836987, 2.320946] // longitude, latitude
     },
     bio: true,
     lieu: {
@@ -54,8 +54,8 @@ module.exports = [
   {
     name: "Marché bio des Batignolles",
     location: {
-      type: [48.882793, 2.323771], // longitude, latitude
-      index: "2d"
+      type: "Point",
+      coordinates: [48.882793, 2.323771] // longitude, latitude
     },
     bio: true,
     lieu: {
