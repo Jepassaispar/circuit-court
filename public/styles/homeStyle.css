@@ -11,10 +11,12 @@
 #logoContainer,
 #logoPart2 {
     display: flex;
-    font-size: 3em;
+
 }
 
-#logoPart1 {}
+#logoPart1 {
+    font-size: 3em;
+}
 
 #logoPart2 {
     flex-direction: column;

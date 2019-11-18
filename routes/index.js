@@ -7,4 +7,10 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/mainPage", (req, res) => {
+  res.render("mainPage", {
+    js: "app"
+  });
+});
+
 module.exports = router;
