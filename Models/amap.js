@@ -3,10 +3,7 @@ const Schema = mongoose.Schema;
 
 const amapSchema = new Schema({
   name: String,
-  location: {
-    type: [Number], // longitude, latitude
-    index: "2d"
-  },
+  location: { type: { type: String }, coordinates: [Number] },
   bio: Boolean,
   lieu: {
     adress: String,
@@ -31,5 +28,6 @@ const amapSchema = new Schema({
   }
 });
 
+amapSchema.index({ location: "2dsphere" });
 const Amap = mongoose.model("Amap", amapSchema);
 module.exports = Amap;
