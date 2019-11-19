@@ -1,9 +1,18 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const marcheSchema = new Schema({
+const businessSchema = new Schema({
   name: String,
-  location: { type: { type: String }, coordinates: [Number] },
+  business: {
+    type: String,
+    enum: ["garden", "market", "amap"]
+  },
+  location: {
+    type: {
+      type: String
+    },
+    coordinates: [Number]
+  },
   bio: Boolean,
   lieu: {
     adress: String,
@@ -28,6 +37,8 @@ const marcheSchema = new Schema({
   }
 });
 
-marcheSchema.index({ location: "2dsphere" });
-const Marche = mongoose.model("Marche", marcheSchema);
-module.exports = Marche;
+businessSchema.index({
+  location: "2dsphere"
+});
+const business = mongoose.model("business", businessSchema);
+module.exports = business;

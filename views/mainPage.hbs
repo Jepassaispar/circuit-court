@@ -1,6 +1,6 @@
 <div class="container">
     <div class="list">
-        {{#each amaps}}
+        {{#each businesses}}
         <div>
             <div class="name">{{this.name}}</div>
             <ul>Lieu
@@ -22,52 +22,8 @@
             </div>
         </div>
         {{/each}}
-
-        {{#each gardens}}
-        <div>
-            <div class="name">{{this.name}}</div>
-            <ul>Lieu
-                <li>Adresse : {{this.lieu.adress}}</li>
-                <li>Zipcode : {{this.lieu.zipcode}}</li>
-            </ul>
-            <ul class="week">
-                Horaires
-                <li>Lundi : {{this.ouverture.Lundi}}</li>
-                <li>Mardi : {{this.ouverture.Mardi}}</li>
-                <li>Mercredi : {{this.ouverture.Mercredi}}</li>
-                <li>Jeudi : {{this.ouverture.Jeudi}}</li>
-                <li>Vendredi : {{this.ouverture.Vendredi}}</li>
-                <li>Samedi : {{this.ouverture.Samedi}}</li>
-                <li>Dimanche : {{this.ouverture.Dimanche}}</li>
-            </ul>
-            <div>
-                Email : {{this.mail}}
-            </div>
-        </div> {{/each}}
-
-        {{#each markets}}
-        <div>
-            <div class="name">{{this.name}}</div>
-            <ul>Lieu
-                <li>Adresse : {{this.lieu.adress}}</li>
-                <li>Zipcode : {{this.lieu.zipcode}}</li>
-            </ul>
-            <ul class="week">
-                Horaires
-                <li>Lundi : {{this.ouverture.Lundi}}</li>
-                <li>Mardi : {{this.ouverture.Mardi}}</li>
-                <li>Mercredi : {{this.ouverture.Mercredi}}</li>
-                <li>Jeudi : {{this.ouverture.Jeudi}}</li>
-                <li>Vendredi : {{this.ouverture.Vendredi}}</li>
-                <li>Samedi : {{this.ouverture.Samedi}}</li>
-                <li>Dimanche : {{this.ouverture.Dimanche}}</li>
-            </ul>
-            <div>
-                Email : {{this.mail}}
-            </div>
-        </div> {{/each}}
     </div>
 
     <div class="map" id="map"></div>
-    
+
 </div>
