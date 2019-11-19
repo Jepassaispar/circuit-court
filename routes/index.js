@@ -12,41 +12,14 @@ router.get("/", (req, res) => {
   });
 });
 
-router.post("/");
-
-router.get("/mainPage", (req, res) => {
-  businessModel
-    .find()
-    .then(dbRes => {
-      const businesses = dbRes;
-      res.render("mainPage", {
-        js: "app",
-        css: ["baseStyle", "mainPage"],
-        businesses: businesses
-      });
-    })
-
-    .catch(err => console.log(err));
-});
-
-router.get("/logIn", (req, res) => {
-  res.render("logIn", {
-    css: ["baseStyle", "sign"]
-  });
-});
-
-router.get("/signUp", (req, res) => {
-  res.render("signUp", {
-    css: ["baseStyle", "sign"]
-  });
-});
-
 router.get("/api", (req, res, next) => {
   businessModel.find({}, (error, allbusinessesFromDB) => {
     if (error) {
       next(error);
     } else {
-      res.status(200).json({ businesses: allbusinessesFromDB });
+      res.status(200).json({
+        businesses: allbusinessesFromDB
+      });
     }
   });
 });

@@ -1,6 +1,7 @@
 .logButton {
     font-size: 16px;
-    width: 7vw;
+    min-width: 100px;
+    width: 10vw;
     border: none;
     background-color: rgb(251, 191, 45);
     color: white;
@@ -9,4 +10,38 @@
     transition: all 1s ease;
     box-shadow: 3px 3px 0px 0px rgb(82, 72, 48);
     height: 40px;
+}
+
+#form_user,
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.form-title {
+    font-size: 2.5em;
+}
+
+.form-container {
+    width: 100vw;
+    height: 93vh;
+}
+
+.input-text {
+    margin: .5em;
+    font-size: 1.3em;
+    border: none;
+}
+
+.form-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-size: 1.3em;
+}
+
+.box-shadow-input {
+    border-bottom: solid 1px gray;
 }
