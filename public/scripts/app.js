@@ -32,6 +32,8 @@ function placeBusinesses(dataBusinesses) {
   dataBusinesses.forEach(Business => {
     const longitude = Business.location.coordinates[1];
     const latitude = Business.location.coordinates[0];
+    const name = Business.business;
+    console.log(name);
     const markers = new google.maps.Marker({
       position: {
         lat: latitude,
