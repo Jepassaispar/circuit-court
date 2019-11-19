@@ -1,8 +1,15 @@
+// import {
+//   unlink
+// } from "/fs";
+
 let map = document.querySelector("#map");
 
 function initMap() {
   const map2 = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 48.865965, lng: 2.341197 },
+    center: {
+      lat: 48.865965,
+      lng: 2.341197
+    },
     zoom: 12
   });
   const myMarker = new google.maps.Marker({
@@ -19,4 +26,8 @@ if (map !== null) {
   initMap();
 }
 
+<<<<<<< HEAD
 ////////////////////////////////////////////////////////
+=======
+///////////////////////////////////////////////////
+>>>>>>> 63a346ba4f8c9896411e0e3ff2901eb311dd47dd
