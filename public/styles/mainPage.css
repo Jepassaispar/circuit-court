@@ -2,12 +2,18 @@
     display: grid;
     grid-template-columns: 7fr 4fr;
     margin: 3vw;
+}
 
+li {
+    list-style: circle;
+    margin-left: 2vw;
 }
 
 .list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 5vh;
+    justify-content: space-around;
 
 }
 
