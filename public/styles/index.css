@@ -12,6 +12,10 @@ PINK: rgb(249,204,211) / #F9CCD3
 BEIGE : #FAF0E1
 */
 
+body {
+  /* overflow: hidden; */
+}
+
 #mainNav {
   position: fixed;
   width: 100vw;
