@@ -40,10 +40,6 @@ router.get("/signUp", (req, res) => {
   });
 });
 
-<<<<<<< HEAD
-
-module.exports = router;
-=======
 router.get("/api", (req, res, next) => {
   businessModel.find({}, (error, allbusinessesFromDB) => {
     if (error) {
@@ -55,4 +51,3 @@ router.get("/api", (req, res, next) => {
 });
 
 module.exports = router;
->>>>>>> 9bf1bd657967c0457549152398254542213ce456
