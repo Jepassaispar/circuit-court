@@ -35,8 +35,6 @@ router.get("/mainPage", (req, res) => {
     }).catch(err => console.log(err))
   }).catch(err => console.log(err))
 
-
-
 });
 
 module.exports = router;

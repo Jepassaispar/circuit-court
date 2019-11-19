@@ -1,173 +1,73 @@
 <div class="container">
     <div class="list">
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li>Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
+        {{#each amaps}}
+        <div>
+            <div class="name">{{this.name}}</div>
+            <ul>Lieu
+                <li>Adresse : {{this.lieu.adress}}</li>
+                <li>Zipcode : {{this.lieu.zipcode}}</li>
             </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
+            <ul class="week">
+                Horaires
+                <li>Lundi : {{this.ouverture.Lundi}}</li>
+                <li>Mardi : {{this.ouverture.Mardi}}</li>
+                <li>Mercredi : {{this.ouverture.Mercredi}}</li>
+                <li>Jeudi : {{this.ouverture.Jeudi}}</li>
+                <li>Vendredi : {{this.ouverture.Vendredi}}</li>
+                <li>Samedi : {{this.ouverture.Samedi}}</li>
+                <li>Dimanche : {{this.ouverture.Dimanche}}</li>
             </ul>
+            <div>
+                Email : {{this.mail}}
+            </div>
         </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
+        {{/each}}
+
+        {{#each gardens}}
+        <div>
+            <div class="name">{{this.name}}</div>
+            <ul>Lieu
+                <li>Adresse : {{this.lieu.adress}}</li>
+                <li>Zipcode : {{this.lieu.zipcode}}</li>
             </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
+            <ul class="week">
+                Horaires
+                <li>Lundi : {{this.ouverture.Lundi}}</li>
+                <li>Mardi : {{this.ouverture.Mardi}}</li>
+                <li>Mercredi : {{this.ouverture.Mercredi}}</li>
+                <li>Jeudi : {{this.ouverture.Jeudi}}</li>
+                <li>Vendredi : {{this.ouverture.Vendredi}}</li>
+                <li>Samedi : {{this.ouverture.Samedi}}</li>
+                <li>Dimanche : {{this.ouverture.Dimanche}}</li>
             </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
+            <div>
+                Email : {{this.mail}}
+            </div>
+        </div> {{/each}}
+
+        {{#each markets}}
+        <div>
+            <div class="name">{{this.name}}</div>
+            <ul>Lieu
+                <li>Adresse : {{this.lieu.adress}}</li>
+                <li>Zipcode : {{this.lieu.zipcode}}</li>
             </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
+            <ul class="week">
+                Horaires
+                <li>Lundi : {{this.ouverture.Lundi}}</li>
+                <li>Mardi : {{this.ouverture.Mardi}}</li>
+                <li>Mercredi : {{this.ouverture.Mercredi}}</li>
+                <li>Jeudi : {{this.ouverture.Jeudi}}</li>
+                <li>Vendredi : {{this.ouverture.Vendredi}}</li>
+                <li>Samedi : {{this.ouverture.Samedi}}</li>
+                <li>Dimanche : {{this.ouverture.Dimanche}}</li>
             </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
-            </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
-            </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
-            </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
-            </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
-            </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
-            </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
-            </ul>
-        </div>
-        <div class="items">
-            <p>Coucou</p>
-            <ul>
-                <li> Lundi: "closed"</li>
-                <li>Mardi: "closed"</li>
-                <li>Mercredi: "19:00-20:30"</li>
-                <li>Jeudi: "closed"</li>
-                <li>Vendredi: "closed"</li>
-                <li>Samedi: "closed"</li>
-                <li>Dimanche: "closed"</li>
-            </ul>
-        </div>
+            <div>
+                Email : {{this.mail}}
+            </div>
+        </div> {{/each}}
     </div>
+
     <div class="map" id="map"></div>
+    
 </div>
