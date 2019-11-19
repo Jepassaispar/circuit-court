@@ -9,11 +9,22 @@ DARK-BLUE: rgb(47,93,168) / #2F5DA8
 LIGHT-BLUE: rgb(72,123,189) / #487BBD
 GREEN-GRAY: rgb(173,213,176) / #ADD5B0
 PINK: rgb(249,204,211) / #F9CCD3
+BEIGE : #FAF0E1
 */
+
+#mainNav {
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
 
 #mainContainer,
 #firsHalfContainer,
-#descriptionContainer {
+#pictureContainer,
+#descriptionContainer,
+#description,
+#secondHalfContainer,
+div {
   display: flex;
 }
 
@@ -34,11 +45,6 @@ PINK: rgb(249,204,211) / #F9CCD3
   align-items: center;
 }
 
-div,
-p {
-  display: flex;
-}
-
 #firstHalfContainer {
   justify-content: space-evenly;
   align-items: flex-start;
@@ -54,7 +60,7 @@ p {
 
 .logo {
   font-weight: bold;
-  color: #08818A;
+  color: #08818a;
 }
 
 #description,
@@ -65,7 +71,7 @@ p {
 #description {
   display: block;
   font-size: 2em;
-  color: #2F5DA8;
+  color: #2f5da8;
   line-height: 1.5em;
 }
 
@@ -75,8 +81,43 @@ p {
   max-height: 80vh;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   #description {
     font-size: 1em;
   }
+}
+
+/* SECOND HALF INDEX */
+
+#secondHalfContainer {
+  background-color: #FAF0E1;
+  /* background-color: #FAF0E1; */
+}
+
+#cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-gap: 5vw;
+  width: 100vw;
+  padding: 5vw;
+  height: 35vw;
+}
+
+.cards {
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 50px;
+  border: solid black 1px;
+}
+
+.linkMap {
+  width: 15vw;
+}
+
+#plantIcon,
+#basketIcon {
+  width: inherit;
 }
