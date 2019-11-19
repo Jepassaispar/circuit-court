@@ -1,5 +1,9 @@
 const express = require("express");
 const router = express();
+const amapModel = require('../Models/amap');
+const gardenModel = require('../Models/jardin');
+const marketModel = require('../Models/marche');
+
 // const marche = require("../Models/marche");
 
 router.get("/", (req, res) => {
@@ -12,29 +16,24 @@ router.get("/", (req, res) => {
 router.post("/")
 
 router.get("/mainPage", (req, res) => {
-  const gardens = "";
-  const amaps = "";
-  const markets = "";
-  gardenModel.find().then(
-    dbRes => {
-      gardens = dbRes;
-      amapModel.find().then(dbRes2 => {
-        amaps = dbRes2;
-        marketModel.find().then(
-          dbRes3 => {
-            markets = dbRes3;
-            res.render("mainPage", {
-              js: "app",
-              css: ["baseStyle", "mainPage"],
-              gardens: gardens,
-              amaps: amaps,
-              markets: markets
-            });
-          }
-        ).catch(err => console.log(err))
+
+
+  gardenModel.find().then(dbRes => {
+    const gardens = dbRes;
+    amapModel.find().then(dbRes2 => {
+      const amaps = dbRes2;
+      marketModel.find().then(dbRes3 => {
+        const markets = dbRes3;
+        res.render("mainPage", {
+          js: "app",
+          css: ["baseStyle", "mainPage"],
+          gardens: gardens,
+          amaps: amaps,
+          markets: markets
+        });
       }).catch(err => console.log(err))
-    }
-  ).catch(err => console.log(err))
+    }).catch(err => console.log(err))
+  }).catch(err => console.log(err))
 
 
 
