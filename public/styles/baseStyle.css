@@ -49,6 +49,10 @@ Prevents blue ugly box from appearing when user click on anything
   font-size: 1.2em;
 }
 
+.is-active {
+  background-color: rgb(243, 153, 5);
+}
+
 /* //////////////LOGO////////////// */
 
 #logoContainer {
