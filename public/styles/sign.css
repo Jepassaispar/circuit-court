@@ -1,0 +1,12 @@
+.logButton {
+    font-size: 16px;
+    width: 7vw;
+    border: none;
+    background-color: rgb(251, 191, 45);
+    color: white;
+    border-radius: 50px;
+    transform: scale(1);
+    transition: all 1s ease;
+    box-shadow: 3px 3px 0px 0px rgb(82, 72, 48);
+    height: 40px;
+}

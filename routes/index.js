@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express();
-const amapModel = require("../Models/amap");
-const gardenModel = require("../Models/jardin");
-const marketModel = require("../Models/marche");
+// const marche = require("../Models/marche");
 
 router.get("/", (req, res) => {
   res.render("index", {
