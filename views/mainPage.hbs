@@ -3,12 +3,9 @@
         {{#each amaps}}
         <div>
             <div class="name">{{this.name}}</div>
-            <ul>Lieu
-                <li>Adresse : {{this.lieu.adress}}</li>
-                <li>Zipcode : {{this.lieu.zipcode}}</li>
-            </ul>
+            <p>Adresse : {{this.lieu.adress}} <br> {{this.lieu.zipcode}} Paris </p>
             <ul class="week">
-                Horaires
+                Horaires:
                 <li>Lundi : {{this.ouverture.Lundi}}</li>
                 <li>Mardi : {{this.ouverture.Mardi}}</li>
                 <li>Mercredi : {{this.ouverture.Mercredi}}</li>
@@ -17,9 +14,6 @@
                 <li>Samedi : {{this.ouverture.Samedi}}</li>
                 <li>Dimanche : {{this.ouverture.Dimanche}}</li>
             </ul>
-            <div>
-                Email : {{this.mail}}
-            </div>
         </div>
         {{/each}}
 
@@ -68,6 +62,6 @@
         </div> {{/each}}
     </div>
 
-    <div class="map" id="map"></div>
-    
+    <div class="map" id="mapDisplay"></div>
+
 </div>

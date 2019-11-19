@@ -1,11 +1,7 @@
-// import {
-//   unlink
-// } from "/fs";
-
-let map = document.querySelector("#map");
+let mapDisplay = document.querySelector("#mapDisplay");
 
 function initMap() {
-  const map2 = new google.maps.Map(document.getElementById("map"), {
+  const map = new google.maps.Map(document.getElementById("mapDisplay"), {
     center: {
       lat: 48.865965,
       lng: 2.341197
@@ -17,17 +13,11 @@ function initMap() {
       lat: 48.882793,
       lng: 2.323771
     },
-    map: map2,
+    map: map,
     title: "I'm here"
   });
 }
 
-if (map !== null) {
+if (mapDisplay !== null) {
   initMap();
 }
-
-<<<<<<< HEAD
-////////////////////////////////////////////////////////
-=======
-///////////////////////////////////////////////////
->>>>>>> 63a346ba4f8c9896411e0e3ff2901eb311dd47dd
