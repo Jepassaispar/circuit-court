@@ -44,10 +44,12 @@ const listener = app.listen(process.env.PORT, () => {
 const index = require("./routes/index");
 const mainPage = require("./routes/mainPage");
 const sign = require("./routes/sign");
+const manageBusinesses = require("./routes/manage-businesses");
 
 app.use("/", index);
 app.use("/", mainPage);
 app.use("/", sign)
+app.use("/", manageBusinesses)
 
 
 module.exports = app;

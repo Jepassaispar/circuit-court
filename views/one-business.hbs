@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="list">
+        <div>
+            <div class="name">{{business.name}}</div>
+            <span class="title">Adresse :</span>
+            <p>{{business.lieu.adress}} <br> {{business.lieu.zipcode}} Paris </p>
+            <span class="title">Description : </span>
+            <p>{{business.infos}}</p>
+
+            <span class="title">Schedules :</span>
+            <div>
+                <li class="day"><span>Monday : </span>{{business.ouverture.Lundi}}</li>
+                <li class="day"><span>Tuesday : </span>{{business.ouverture.Mardi}}</li>
+                <li class="day"><span>Wednesday : </span>{{business.ouverture.Mercredi}}</li>
+                <li class="day"><span>Thursday : </span>{{business.ouverture.Jeudi}}</li>
+                <li class="day"><span>Friday : </span>{{business.ouverture.Vendredi}}</li>
+                <li class="day"><span>Saturday : </span>{{business.ouverture.Samedi}}</li>
+                <li class="day"><span>Sunday : </span>{{business.ouverture.Dimanche}}</li>
+            </div>
+
+            <span class="title">Contact : </span>
+            <p>
+                <span>Website : {{business.site}}</span>
+                <span>Phone : {{business.phone}}</span>
+                <span>Email : {{business.mail}}</span>
+            </p>
+        </div>
+    </div>
+
+</div>

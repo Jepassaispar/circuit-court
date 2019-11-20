@@ -7,9 +7,10 @@
             <p>Adresse : {{this.lieu.adress}} <br> {{this.lieu.zipcode}} Paris </p>
             <div class="popUpParentDiv">
                 <button class="schedules popup" href="">Horaires</button>
+                <a href="/mainPage/{{this._id}}">See more...</a>
                 <div id="popup{{@index}}" class="popup">
                     <span class="popuptext" id="popuptext{{@index}}">
-                        <button id=" closePopUp{{@index}}" class="closePopUps">close</button>
+                        <button id="closePopUp{{@index}}" class="closePopUps">close</button>
                         <div class="weekContainer">
                             <li class="day"><span>Lundi : </span>{{this.ouverture.Lundi}}</li>
                             <li class="day"><span>Mardi : </span>{{this.ouverture.Mardi}}</li>

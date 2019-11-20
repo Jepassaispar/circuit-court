@@ -1,0 +1,15 @@
+<td class="table-division">
+  <div><img src="{{this.image}}" alt="img" class="table-image" /></div>
+</td>
+<td class="table-division">
+  <div>{{this.name}}</div>
+</td>
+<td class="table-division">
+  <a href="/product-edit/{{this._id}}" data-id-sneaker="{{this._id}}" class="fa fa-edit table-icon"></a>
+</td>
+<td class="table-division">
+
+  <form aria-hidden="true" action="/product-delete/{{this._id}}" method="POST">
+    <button class="fa fa-trash table-icon"></button></form>
+
+</td>

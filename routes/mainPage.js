@@ -18,4 +18,18 @@ router.get("/mainPage", (req, res) => {
         .catch(err => console.log(err));
 });
 
+router.get("/mainPage/:id", (req, res, next) => {
+    businessModel
+        .findById(req.params.id)
+        .then(dbRes => {
+            const business = dbRes;
+            res.render("one-business", {
+                business: business,
+                css: ["baseStyle", "mainPage"],
+                js: "app"
+            });
+        })
+        .catch(err => console.log("err"))
+})
+
 module.exports = router;

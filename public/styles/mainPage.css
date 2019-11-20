@@ -26,7 +26,6 @@ BEIGE : #FAF0E1
 
 #mapDisplay {
   position: sticky !important;
-  left: 0;
   top: 03vw;
   height: 60vh;
   min-height: 500px;
