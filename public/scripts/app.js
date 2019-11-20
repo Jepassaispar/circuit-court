@@ -15,12 +15,9 @@ var icons = {
   garden: iconBase + "yellowmarker2_m5ah3a.png"
 };
 
-function initMap() {
-  getBusinesses();
-}
 
 if (mapDisplay !== null) {
-  initMap();
+  // getBusinesses();
 }
 
 function getBusinesses() {
@@ -34,25 +31,29 @@ function getBusinesses() {
     });
 }
 
-function placeBusinesses(dataBusinesses) {
-  dataBusinesses.forEach(Business => {
-    const longitude = Business.location.coordinates[1];
-    const latitude = Business.location.coordinates[0];
-    const type = Business.business;
-    const markers = new google.maps.Marker({
-      position: {
-        lat: latitude,
-        lng: longitude
-      },
-      icon: {
-        url: icons[type],
-        scaledSize: new google.maps.Size(32, 32)
-      },
+let markers = [];
 
-      map: map,
-      title: Business.name
-    });
-  });
+function placeOneBusiness(Business) {
+  const longitude = Business.location.coordinates[1];
+  const latitude = Business.location.coordinates[0];
+  const type = Business.business;
+  markers.push(new google.maps.Marker({
+    position: {
+      lat: latitude,
+      lng: longitude
+    },
+    icon: {
+      url: icons[type],
+      scaledSize: new google.maps.Size(20, 32)
+    },
+
+    map: map,
+    title: Business.name
+  }));
+}
+
+function placeBusinesses(dataBusinesses) {
+  dataBusinesses.forEach(placeOneBusiness);
 }
 
 ////////////////////////////POP-UP ADDRESSES////////////////////////////
@@ -71,8 +72,7 @@ function toggleVisibility(i) {
 function setListeners() {
   var schedules = document.querySelectorAll(".schedules");
   schedules.forEach((schedule, i) => {
-    schedule.onclick = function() {
-      console.log("yo");
+    schedule.onclick = function () {
       toggleVisibility(i);
     };
   });
@@ -94,4 +94,9 @@ function popUpsListeners() {
 
 popUpsListeners();
 
-export { setListeners, popUpsListeners, getBusinesses };
+export {
+  setListeners,
+  popUpsListeners,
+  placeBusinesses,
+  markers
+};

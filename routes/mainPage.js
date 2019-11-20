@@ -19,12 +19,13 @@ router.get("/mainPage", (req, res) => {
 });
 
 router.post("/filter-mainPage", (req, res) => {
-  console.log(req.body.zipcode.length);
   const query = {};
   if (req.body.zipcode.length > 0) {
     query.zipcode = req.body.zipcode;
     businessModel
-      .find({ "lieu.zipcode": query.zipcode })
+      .find({
+        "lieu.zipcode": query.zipcode
+      })
       .then(dbRes => {
         res.send(dbRes);
       })
@@ -38,17 +39,17 @@ router.post("/filter-mainPage", (req, res) => {
 });
 
 router.get("/mainPage/:id", (req, res, next) => {
-    businessModel
-        .findById(req.params.id)
-        .then(dbRes => {
-            const business = dbRes;
-            res.render("one-business", {
-                business: business,
-                css: ["baseStyle", "mainPage"],
-                js: "app"
-            });
-        })
-        .catch(err => console.log("err"))
+  businessModel
+    .findById(req.params.id)
+    .then(dbRes => {
+      const business = dbRes;
+      res.render("one-business", {
+        business: business,
+        css: ["baseStyle", "mainPage"],
+        js: "app"
+      });
+    })
+    .catch(err => console.log("err"))
 })
 
 module.exports = router;
