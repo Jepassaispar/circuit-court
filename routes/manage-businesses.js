@@ -53,3 +53,43 @@ router.post("/product-delete/:id", (req, res) => {
     .findByIdAndDelete(req.params.id)
     .then(res.redirect("/manage-businesses"));
 });
+
+router.get("/product-edit/:id", (req, res) => {
+  Promise.all([businessModel.findById(req.params.id)])
+    .then(dbRes => {
+      const business = dbRes[0];
+      res.render("product_edit", {
+        business
+      });
+    })
+    .catch(err => console.log(err));
+});
+
+router.post("/product-edit/:id", (req, res) => {
+  const editedBusiness = {
+    name: req.body.name,
+    business: req.body.category,
+    bio: req.body.bio.checked,
+    lieu: {
+      adress: req.body.adress,
+      zipcode: req.body.zipcode
+    },
+    phone: req.body.phone,
+    infos: req.body.info,
+    site: req.body.site,
+    mail: req.body.mail,
+    ouverture: {
+      lundi: req.body.lundi,
+      mardi: req.body.mardi,
+      mercredi: req.body.mercredi,
+      jeudi: req.body.jeudi,
+      vendredi: req.body.vendredi,
+      samedi: req.body.samedi,
+      dimanche: req.body.dimanche
+    },
+    image: req.body.image
+  };
+  businessModel.findByIdAndUpdate(req.params.id, editedBusiness).then(dbRes => {
+    res.redirect("/");
+  });
+});
