@@ -10,7 +10,7 @@ const map = new google.maps.Map(document.getElementById("mapDisplay"), {
 var iconBase =
   "https://res.cloudinary.com/dawdmintj/image/upload/v1573824978/user-pictures/";
 var icons = {
-  market: iconBase + "greenmarker_gancfg.png",
+  market: iconBase + "markettest_gs1jqp.png",
   amap: iconBase + "google-map-icon-png-8_bloyi7.png",
   garden: iconBase + "yellowmarker2_m5ah3a.png"
 };
@@ -47,7 +47,7 @@ function placeBusinesses(dataBusinesses) {
       },
       icon: {
         url: icons[type],
-        scaledSize: new google.maps.Size(20, 32)
+        scaledSize: new google.maps.Size(32, 32)
       },
 
       map: map,
