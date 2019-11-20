@@ -47,7 +47,6 @@ const sign = require("./routes/sign");
 
 app.use("/", index);
 app.use("/", mainPage);
-app.use("/", sign)
-
+app.use("/", sign);
 
 module.exports = app;

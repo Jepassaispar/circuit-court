@@ -1,4 +1,8 @@
 <div class="container">
+    {{#each businesses}}
+    <label>{{this.lieu.zipcode}}</label>
+    <input data-zipcode="{{this.lieu.zipcode}}" type="checkbox" name="zipcode">
+    {{/each}}
     <div class="list">
         {{#each businesses}}
         <div>

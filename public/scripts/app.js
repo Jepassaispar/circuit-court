@@ -27,7 +27,6 @@ function getBusinesses() {
   axios
     .get("/api")
     .then(apiRes => {
-      console.log(apiRes);
       placeBusinesses(apiRes.data.businesses);
     })
     .catch(error => {
@@ -59,29 +58,29 @@ function placeBusinesses(dataBusinesses) {
 ////////////////////////////POP-UP ADDRESSES////////////////////////////
 
 var schedules = document.querySelectorAll(".schedules");
-var closePopUps = document.querySelectorAll(".closePopUps")
+var closePopUps = document.querySelectorAll(".closePopUps");
 
 function toggleVisibility() {
-  var popuptextId = document.getElementById(`popuptext${i}`)
+  var popuptextId = document.getElementById(`popuptext${i}`);
   var popupId = document.getElementById(`popup${i}`);
-  popupId.classList.toggle('show')
-  popuptextId.classList.toggle('show')
+  popupId.classList.toggle("show");
+  popuptextId.classList.toggle("show");
 }
 
 schedules.forEach((schedule, i) => {
   schedule.onclick = function toggleVisibility() {
-    var popuptextId = document.getElementById(`popuptext${i}`)
+    var popuptextId = document.getElementById(`popuptext${i}`);
     var popupId = document.getElementById(`popup${i}`);
-    popupId.classList.toggle('show')
-    popuptextId.classList.toggle('show')
-  }
-})
+    popupId.classList.toggle("show");
+    popuptextId.classList.toggle("show");
+  };
+});
 
 closePopUps.forEach((closePopUp, i) => {
   closePopUp.onclick = function toggleVisibility() {
-    var popuptextId = document.getElementById(`popuptext${i}`)
+    var popuptextId = document.getElementById(`popuptext${i}`);
     var popupId = document.getElementById(`popup${i}`);
-    popupId.classList.toggle('show')
-    popuptextId.classList.toggle('show')
-  }
-})
+    popupId.classList.toggle("show");
+    popuptextId.classList.toggle("show");
+  };
+});
