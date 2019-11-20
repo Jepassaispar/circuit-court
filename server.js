@@ -51,5 +51,4 @@ app.use("/", mainPage);
 app.use("/", sign)
 app.use("/", manageBusinesses)
 
-
 module.exports = app;

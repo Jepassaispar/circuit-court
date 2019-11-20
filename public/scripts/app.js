@@ -10,7 +10,7 @@ const map = new google.maps.Map(document.getElementById("mapDisplay"), {
 var iconBase =
   "https://res.cloudinary.com/dawdmintj/image/upload/v1573824978/user-pictures/";
 var icons = {
-  market: iconBase + "greenmarker_gancfg.png",
+  market: iconBase + "markettest_gs1jqp.png",
   amap: iconBase + "google-map-icon-png-8_bloyi7.png",
   garden: iconBase + "yellowmarker2_m5ah3a.png"
 };
@@ -27,7 +27,6 @@ function getBusinesses() {
   axios
     .get("/api")
     .then(apiRes => {
-      console.log(apiRes);
       placeBusinesses(apiRes.data.businesses);
     })
     .catch(error => {
@@ -47,7 +46,7 @@ function placeBusinesses(dataBusinesses) {
       },
       icon: {
         url: icons[type],
-        scaledSize: new google.maps.Size(20, 32)
+        scaledSize: new google.maps.Size(32, 32)
       },
 
       map: map,
@@ -59,29 +58,40 @@ function placeBusinesses(dataBusinesses) {
 ////////////////////////////POP-UP ADDRESSES////////////////////////////
 
 var schedules = document.querySelectorAll(".schedules");
-var closePopUps = document.querySelectorAll(".closePopUps")
+var closePopUps = document.querySelectorAll(".closePopUps");
 
-function toggleVisibility() {
-  var popuptextId = document.getElementById(`popuptext${i}`)
+function toggleVisibility(i) {
+  var popuptextId = document.getElementById(`popuptext${i}`);
   var popupId = document.getElementById(`popup${i}`);
-  popupId.classList.toggle('show')
-  popuptextId.classList.toggle('show')
+
+  popupId.classList.toggle("show");
+  popuptextId.classList.toggle("show");
 }
 
-schedules.forEach((schedule, i) => {
-  schedule.onclick = function toggleVisibility() {
-    var popuptextId = document.getElementById(`popuptext${i}`)
-    var popupId = document.getElementById(`popup${i}`);
-    popupId.classList.toggle('show')
-    popuptextId.classList.toggle('show')
-  }
-})
+function setListeners() {
+  var schedules = document.querySelectorAll(".schedules");
+  schedules.forEach((schedule, i) => {
+    schedule.onclick = function() {
+      console.log("yo");
+      toggleVisibility(i);
+    };
+  });
+}
 
-closePopUps.forEach((closePopUp, i) => {
-  closePopUp.onclick = function toggleVisibility() {
-    var popuptextId = document.getElementById(`popuptext${i}`)
-    var popupId = document.getElementById(`popup${i}`);
-    popupId.classList.toggle('show')
-    popuptextId.classList.toggle('show')
-  }
-})
+setListeners();
+
+function popUpsListeners() {
+  var closePopUps = document.querySelectorAll(".closePopUps");
+  closePopUps.forEach((closePopUp, i) => {
+    closePopUp.onclick = function toggleVisibility() {
+      var popuptextId = document.getElementById(`popuptext${i}`);
+      var popupId = document.getElementById(`popup${i}`);
+      popupId.classList.toggle("show");
+      popuptextId.classList.toggle("show");
+    };
+  });
+}
+
+popUpsListeners();
+
+export { setListeners, popUpsListeners, getBusinesses };
