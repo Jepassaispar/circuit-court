@@ -16,7 +16,7 @@ var icons = {
 };
 
 if (mapDisplay !== null) {
-  // getBusinesses();
+  getBusinesses();
 }
 
 function getBusinesses() {
