@@ -19,7 +19,7 @@ BEIGE : #FAF0E1
 
 .list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1);
   row-gap: 5vh;
   justify-content: space-around;
 }
@@ -41,7 +41,7 @@ BEIGE : #FAF0E1
 /* POP-UP */
 
 .weekContainer {
-  color: white;
+  color: rgb(8, 129, 138);
 }
 
 .popup .popuptext {
@@ -54,10 +54,10 @@ BEIGE : #FAF0E1
   color: black;
   width: 12rem;
   font-size: 1rem;
-  background-color: #487bbd;
-  border-radius: 30px;
+  background-color: rgb(251, 191, 45);
+  /* border-radius: 30px; */
   border: none;
-  box-shadow: gray 5px 5px;
+  box-shadow: rgb(243, 153, 5) 2px 2px;
   visibility: hidden;
   padding: 1em;
 }
@@ -70,9 +70,9 @@ BEIGE : #FAF0E1
 }
 
 .closePopUps {
-  background-color: #487bbd;
+  background-color: rgb(251, 191, 45);
   width: 50px;
-  color: white;
+  color: rgb(8, 129, 138);
   border: none;
   font-size: 1.2em;
 }
@@ -82,7 +82,7 @@ BEIGE : #FAF0E1
 }
 
 .schedules:hover {
-  color: blue;
+  color: rgb(8, 129, 138);
 }
 
 .schedules:hover,
@@ -100,4 +100,32 @@ BEIGE : #FAF0E1
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.img-container {
+  width: 60%;
+}
+
+.img {
+  width: 100%
+}
+
+.business {
+  margin-left: 5%;
+}
+
+.fullBusiness {
+  display: flex;
+}
+
+.businessType {
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.adresse {
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 10px;
 }

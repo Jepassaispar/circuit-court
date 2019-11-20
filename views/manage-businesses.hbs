@@ -1,6 +1,6 @@
 <div class="big-container manage-products-wrapper">
     <div class="edit-delete-container">
-        <h3 class="manage-products-title">Manage your catalog</h3>
+        <h3 class="manage-products-title">Manage the Database</h3>
         <table class="product-manage-table">
             <thead>
                 <tr class="table-row">
@@ -29,14 +29,16 @@
     <div class="create-container">
 
         <form action="/create-product" method="post">
-            <label for="image">Logo</label>
-            <input type="text" placeholde="carotte.png">
-
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="The Sauvage Carrot">
-            <label for="type">Type of Business</label>
             <div class="form-item-wrapper flexed-item">
-                <label for="type" class="label">Main category</label>
+                <label for="image-img" class="image">Image</label>
+                <input id="image-img" type="file" class="image input">
+            </div>
+            <div class="nameBusiness">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="The Sauvage Carrot">
+            </div>
+            <div class="form-item-wrapper flexed-item">
+                <label for="type" class="label">Type of Business</label>
                 <select id="type" class="select" name="category" required>
                     <option value="-1" disabled selected>Choose a category</option>
                     <option value="amap" name>Amap</option>
@@ -44,12 +46,14 @@
                     <option value="garden">Garden</option>
                 </select>
             </div>
-            <span>Address</span>
-            <label for="adress">Street</label>
-            <input name="adress" id="adress location" type="text" placeholder="28 rue de la Carotte">
-            <label for="zipcode">Zipcode</label>
-            <input name="zipcode" id="zipcode location" type="text" placeholder="75000">
-            <div>
+            <div class="adressBusiness">
+                <span>Address</span>
+                <label for="adress">Street</label>
+                <input name="adress" id="adress location" type="text" placeholder="28 rue de la Carotte">
+                <label for="zipcode">Zipcode</label>
+                <input name="zipcode" id="zipcode location" type="text" placeholder="75000">
+            </div>
+            <div class="contactBusiness">
                 <span>Contact</span>
                 <label for="mail">Mail</label>
                 <input type="text" name="mail" id="mail" placeholder="carrot@vegetable.com">
@@ -58,28 +62,33 @@
                 <label for="site">Site</label>
                 <input type="text" name="site" id="site" placeholder="https://carrot.com/">
             </div>
-            <div>Schedule
-                <label for="lundi" class="label">Monday : </label>
-                <input type="text" class="input" name="input" id="lundi" placeholder="10:00-20:30">
-                <label for="" class="label">Tuesday : </label>
-                <input type="text" class="input" name="mardi" id="mardi" placeholder="10:00-20:30">
-                <label for="" class="label">Wednesday : </label>
-                <input type="text" class="input" placeholder="10:00-20:30">
-                <label for="" class="label">Thursday : </label>
-                <input type="text" class="input" placeholder="10:00-20:30">
-                <label for="" class="label">Friday : </label>
-                <input type="text" class="input" placeholder="10:00-20:30">
-                <label for="" class="label">Saturday : </label>
-                <input type="text" class="input" placeholder="10:00-20:30">
-                <label for="" class="label">Sunday : </label>
-                <input type="text" class="input" placeholder="10:00-20:30">
-
+            <div class="scheduleBusiness">
+                <span>Schedule</span>
+                <div class="dayofBusiness">
+                    <label for="lundi" class="label">Monday : </label>
+                    <input type="text" class="input" name="input" id="lundi" placeholder="10:00-20:30">
+                    <label for="" class="label">Tuesday : </label>
+                    <input type="text" class="input" name="mardi" id="mardi" placeholder="10:00-20:30">
+                    <label for="" class="label">Wednesday : </label>
+                    <input type="text" class="input" placeholder="10:00-20:30">
+                    <label for="" class="label">Thursday : </label>
+                    <input type="text" class="input" placeholder="10:00-20:30">
+                    <label for="" class="label">Friday : </label>
+                    <input type="text" class="input" placeholder="10:00-20:30">
+                    <label for="" class="label">Saturday : </label>
+                    <input type="text" class="input" placeholder="10:00-20:30">
+                    <label for="" class="label">Sunday : </label>
+                    <input type="text" class="input" placeholder="10:00-20:30">
+                </div>
             </div>
-
-            <label for="info">Description</label>
-            <input name="info" type="text"
-                placeholder="The sauvage carrot will help you reconnect with carrots and give them the place they deserve in your life">
-            <span><label for="bio">Bio ?</label> <input type="checkbox" id="bio" name="bio"></span>
+            <div class="infoBusiness">
+                <label for="info">Description</label>
+                <input name="info" type="text"
+                    placeholder="The sauvage carrot will help you reconnect with carrots and give them the place they deserve in your life">
+            </div>
+            <div class="bioBusiness">
+                <label for="bio">Bio ?</label> <input type="checkbox" id="bio" name="bio">
+            </div>
             <button>Create</button>
 
 

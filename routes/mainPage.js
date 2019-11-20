@@ -38,17 +38,17 @@ router.post("/filter-mainPage", (req, res) => {
 });
 
 router.get("/mainPage/:id", (req, res, next) => {
-    businessModel
-        .findById(req.params.id)
-        .then(dbRes => {
-            const business = dbRes;
-            res.render("one-business", {
-                business: business,
-                css: ["baseStyle", "mainPage"],
-                js: "app"
-            });
-        })
-        .catch(err => console.log("err"))
-})
+  businessModel
+    .findById(req.params.id)
+    .then(dbRes => {
+      const business = dbRes;
+      res.render("one-business", {
+        business: business,
+        css: ["baseStyle", "mainPage", "one-business"],
+        js: "app"
+      });
+    })
+    .catch(err => console.log("err"));
+});
 
 module.exports = router;

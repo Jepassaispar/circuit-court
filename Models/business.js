@@ -33,7 +33,8 @@ const businessSchema = new Schema({
   },
   image: {
     type: String,
-    default: ""
+    default:
+      "https://static.aujardin.info/cache/th/img8/potager-carres-600x450.webp?1"
   }
 });
 
