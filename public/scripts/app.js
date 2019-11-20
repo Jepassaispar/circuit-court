@@ -94,4 +94,4 @@ function popUpsListeners() {
 
 popUpsListeners();
 
-export { setListeners, popUpsListeners, getBusinesses };
+export { setListeners, popUpsListeners, placeBusinesses };

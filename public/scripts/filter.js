@@ -1,4 +1,4 @@
-import { setListeners, popUpsListeners } from "./app.js";
+import { setListeners, popUpsListeners, placeBusinesses } from "./app.js";
 // import { get } from "mongoose";
 
 const checkBoxes = document.querySelectorAll("[name='zipcode']");
