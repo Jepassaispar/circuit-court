@@ -3,17 +3,25 @@
         {{#each businesses}}
         <div>
             <div class="name">{{this.name}}</div>
+
             <p>Adresse : {{this.lieu.adress}} <br> {{this.lieu.zipcode}} Paris </p>
-            <ul class="week">
-                Horaires:
-                <li>Lundi : {{this.ouverture.Lundi}}</li>
-                <li>Mardi : {{this.ouverture.Mardi}}</li>
-                <li>Mercredi : {{this.ouverture.Mercredi}}</li>
-                <li>Jeudi : {{this.ouverture.Jeudi}}</li>
-                <li>Vendredi : {{this.ouverture.Vendredi}}</li>
-                <li>Samedi : {{this.ouverture.Samedi}}</li>
-                <li>Dimanche : {{this.ouverture.Dimanche}}</li>
-            </ul>
+            <div class="popUpParentDiv">
+                <button class="schedules popup" href="">Horaires</button>
+                <div id="popup{{@index}}" class="popup">
+                    <span class="popuptext" id="popuptext{{@index}}">
+                        <button id=" closePopUp{{@index}}" class="closePopUps">close</button>
+                        <div class="weekContainer">
+                            <li class="day"><span>Lundi : </span>{{this.ouverture.Lundi}}</li>
+                            <li class="day"><span>Mardi : </span>{{this.ouverture.Mardi}}</li>
+                            <li class="day"><span>Mercredi : </span>{{this.ouverture.Mercredi}}</li>
+                            <li class="day"><span>Jeudi : </span>{{this.ouverture.Jeudi}}</li>
+                            <li class="day"><span>Vendredi : </span>{{this.ouverture.Vendredi}}</li>
+                            <li class="day"><span>Samedi : </span>{{this.ouverture.Samedi}}</li>
+                            <li class="day"><span>Dimanche : </span>{{this.ouverture.Dimanche}}</li>
+                        </div>
+                    </span>
+                </div>
+            </div>
         </div>
         {{/each}}
     </div>

@@ -32,6 +32,10 @@ Prevents blue ugly box from appearing when user click on anything
   display: flex;
 }
 
+#linkLogo {
+  text-decoration: none;
+}
+
 /* //////////////MAINNAV////////////// */
 
 #mainNav {
@@ -39,8 +43,8 @@ Prevents blue ugly box from appearing when user click on anything
   background-color: #fbbf2d;
   width: 100vw;
   box-shadow: 1px 1px 2px 2px rgb(153, 118, 30);
+  padding-right: 1em;
 }
-
 
 /* #mainNav {
   flex-direction: row;
@@ -61,14 +65,11 @@ Prevents blue ugly box from appearing when user click on anything
 
 .link {
   font-family: arial;
-
   display: inline-block;
-  color: rgb(222, 222, 222);
+  color: white;
   padding: 14px 16px;
   text-decoration: none;
-
 }
-
 
 .is-active {
   color: rgb(8, 129, 138);

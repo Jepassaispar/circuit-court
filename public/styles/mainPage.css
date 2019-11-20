@@ -1,32 +1,104 @@
-.container {
-    display: grid;
-    grid-template-columns: 7fr 4fr;
-    margin: 3vw;
-}
+/* 
+//////////////COLORS//////////////
 
-li {
-    list-style: circle;
-    margin-left: 2vw;
+YELLOW: rgb(251,191,45) / #FBBF2D
+ORANGE: rgb(243, 153, 5) /
+GREEN: rgb(8,129,138) / #08818A
+DARK-BLUE: rgb(47,93,168) / #2F5DA8
+LIGHT-BLUE: rgb(72,123,189) / #487BBD
+GREEN-GRAY: rgb(173,213,176) / #ADD5B0
+PINK: rgb(249,204,211) / #F9CCD3
+BEIGE : #FAF0E1
+*/
+
+.container {
+  display: grid;
+  grid-template-columns: 7fr 4fr;
+  margin: 3vw;
 }
 
 .list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 5vh;
-    justify-content: space-around;
-
-}
-
-.items {
-    padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 5vh;
+  justify-content: space-around;
 }
 
 #mapDisplay {
+  position: sticky !important;
+  left: 0;
+  top: 03vw;
+  height: 60vh;
+  min-height: 500px;
+  min-width: 500px;
+}
 
-    position: sticky !important;
-    left: 0;
-    top: 03vw;
-    height: 60vh;
-    min-height: 500px;
-    min-width: 500px;
+.schedules {
+  background: none;
+  font-size: 1em;
+  border: none;
+}
+
+/* POP-UP */
+
+.weekContainer {
+  color: white;
+}
+
+.popup .popuptext {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  width: 12rem;
+  font-size: 1rem;
+  background-color: #487bbd;
+  border-radius: 30px;
+  border: none;
+  box-shadow: gray 5px 5px;
+  visibility: hidden;
+  padding: 1em;
+}
+
+.popup .show {
+  visibility: visible !important;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  z-index: 5;
+}
+
+.closePopUps {
+  background-color: #487bbd;
+  width: 50px;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+}
+
+.closePopUps:hover {
+  color: black;
+}
+
+.schedules:hover {
+  color: blue;
+}
+
+.schedules:hover,
+.closePopUps:hover {
+  cursor: pointer;
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+}
+
+.weekContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

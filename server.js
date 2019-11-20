@@ -42,6 +42,12 @@ const listener = app.listen(process.env.PORT, () => {
 });
 
 const index = require("./routes/index");
+const mainPage = require("./routes/mainPage");
+const sign = require("./routes/sign");
+
 app.use("/", index);
+app.use("/", mainPage);
+app.use("/", sign)
+
 
 module.exports = app;
