@@ -60,27 +60,38 @@ function placeBusinesses(dataBusinesses) {
 var schedules = document.querySelectorAll(".schedules");
 var closePopUps = document.querySelectorAll(".closePopUps");
 
-function toggleVisibility() {
+function toggleVisibility(i) {
   var popuptextId = document.getElementById(`popuptext${i}`);
   var popupId = document.getElementById(`popup${i}`);
+
   popupId.classList.toggle("show");
   popuptextId.classList.toggle("show");
 }
 
-schedules.forEach((schedule, i) => {
-  schedule.onclick = function toggleVisibility() {
-    var popuptextId = document.getElementById(`popuptext${i}`);
-    var popupId = document.getElementById(`popup${i}`);
-    popupId.classList.toggle("show");
-    popuptextId.classList.toggle("show");
-  };
-});
+function setListeners() {
+  var schedules = document.querySelectorAll(".schedules");
+  schedules.forEach((schedule, i) => {
+    schedule.onclick = function() {
+      console.log("yo");
+      toggleVisibility(i);
+    };
+  });
+}
 
-closePopUps.forEach((closePopUp, i) => {
-  closePopUp.onclick = function toggleVisibility() {
-    var popuptextId = document.getElementById(`popuptext${i}`);
-    var popupId = document.getElementById(`popup${i}`);
-    popupId.classList.toggle("show");
-    popuptextId.classList.toggle("show");
-  };
-});
+setListeners();
+
+function popUpsListeners() {
+  var closePopUps = document.querySelectorAll(".closePopUps");
+  closePopUps.forEach((closePopUp, i) => {
+    closePopUp.onclick = function toggleVisibility() {
+      var popuptextId = document.getElementById(`popuptext${i}`);
+      var popupId = document.getElementById(`popup${i}`);
+      popupId.classList.toggle("show");
+      popuptextId.classList.toggle("show");
+    };
+  });
+}
+
+popUpsListeners();
+
+export { setListeners, popUpsListeners, getBusinesses };

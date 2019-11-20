@@ -1,3 +1,6 @@
+import { setListeners, popUpsListeners } from "./app.js";
+// import { get } from "mongoose";
+
 const checkBoxes = document.querySelectorAll("[name='zipcode']");
 const businessContainer = document.querySelector(".list");
 
@@ -23,10 +26,10 @@ checkBoxes.forEach(checkbox => {
 
           <p>Adresse : ${business.lieu.adress} <br> ${business.lieu.zipcode} Paris </p>
           <div class="popUpParentDiv">
-              <button class="schedules popup" href="">Horaires</button>
+              <button class="schedules popup" >Horaires</button>
               <div id="popup${i}" class="popup">
                   <span class="popuptext" id="popuptext${i}">
-                      <button id=" closePopUp${i}" class="closePopUps">close</button>
+                      <button id="closePopUp${i}" class="closePopUps">close</button>
                       <div class="weekContainer">
                           <li class="day"><span>Lundi : </span>${business.ouverture.Lundi}</li>
                           <li class="day"><span>Mardi : </span>${business.ouverture.Mardi}</li>
@@ -40,7 +43,9 @@ checkBoxes.forEach(checkbox => {
               </div>
           </div>
       </div>
-      <script type="text/javascript" src="scripts/app.js"></script>`;
+            `;
+          setListeners();
+          popUpsListeners();
         });
       })
       .catch(err => console.log(err));

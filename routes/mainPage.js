@@ -19,6 +19,7 @@ router.get("/mainPage", (req, res) => {
 });
 
 router.post("/filter-mainPage", (req, res) => {
+  console.log(req.body.zipcode.length);
   const query = {};
   if (req.body.zipcode.length > 0) {
     query.zipcode = req.body.zipcode;
