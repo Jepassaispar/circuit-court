@@ -19,12 +19,13 @@ router.get("/mainPage", (req, res) => {
 });
 
 router.post("/filter-mainPage", (req, res) => {
-  console.log(req.body.zipcode.length);
   const query = {};
   if (req.body.zipcode.length > 0) {
     query.zipcode = req.body.zipcode;
     businessModel
-      .find({ "lieu.zipcode": query.zipcode })
+      .find({
+        "lieu.zipcode": query.zipcode
+      })
       .then(dbRes => {
         res.send(dbRes);
       })

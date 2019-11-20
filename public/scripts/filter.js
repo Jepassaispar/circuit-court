@@ -1,4 +1,9 @@
-import { setListeners, popUpsListeners, placeBusinesses } from "./app.js";
+import {
+  setListeners,
+  popUpsListeners,
+  placeBusinesses,
+  markers
+} from "./app.js";
 // import { get } from "mongoose";
 
 const checkBoxes = document.querySelectorAll("[name='zipcode']");
@@ -21,7 +26,7 @@ checkBoxes.forEach(checkbox => {
 
         businessContainer.innerHTML = "";
         filteredZipcode.forEach((business, i) => {
-          businessContainer.innerHTML += ` <div>
+          businessContainer.innerHTML += `<div>
           <div class="name">${business.name}</div>
 
           <p>Adresse : ${business.lieu.adress} <br> ${business.lieu.zipcode} Paris </p>
@@ -43,10 +48,13 @@ checkBoxes.forEach(checkbox => {
               </div>
           </div>
       </div>
-            `;
+      `;
           setListeners();
           popUpsListeners();
+          console.log(markers);
+          markers.forEach(marker => marker.setMap(null));
         });
+        placeBusinesses(filteredZipcode);
       })
       .catch(err => console.log(err));
   };
