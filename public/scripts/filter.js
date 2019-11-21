@@ -22,7 +22,7 @@ function filter(checkboxes, targetAttribute, payloadName) {
       payload[payloadName] = checked;
 
       axios
-        .post(`http://localhost:2000/filter-mainPage`, payload)
+        .post(`https://circuit-court.herokuapp.com//filter-mainPage`, payload)
         .then(myAPIRes => {
           const filteredZipcode = myAPIRes.data;
           businessContainer.innerHTML = "";
