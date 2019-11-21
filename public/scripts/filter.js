@@ -11,7 +11,7 @@ const businessContainer = document.querySelector(".list");
 
 function filter(checkboxes, targetAttribute, payloadName) {
   checkboxes.forEach(checkbox => {
-    checkbox.onclick = function(event) {
+    checkbox.onclick = function (event) {
       const checked = [];
       checkboxes.forEach(input => {
         if (input.checked === true) {
@@ -22,7 +22,7 @@ function filter(checkboxes, targetAttribute, payloadName) {
       payload[payloadName] = checked;
 
       axios
-        .post("https://circuit-court.herokuapp.com/filter-mainPage", payload)
+        .post(`https://circuit-court.herokuapp.com/filter-mainPage`, payload)
         .then(myAPIRes => {
           const filteredZipcode = myAPIRes.data;
 
