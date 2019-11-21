@@ -15,18 +15,27 @@
         </div>
     </a>
     <div id="links">
+        {{#if isLoggedIn}}
         <a href="/manage-businesses" class="link" id="">
             Manage
         </a>
+        {{/if}}
         <a href="/mainPage" class="link" id="">
             Maps
         </a>
+        {{#unless isLoggedIn}}
         <a href="/signUp" class="link" id="">
             Sign Up
         </a>
         <a href="/logIn" class="link" id="">
             Log In
         </a>
+        {{/unless}}
+        {{#if isLoggedIn}}
+        <a href="/logout" class="link">
+            <span class="btn-text">Log out</span>
+        </a>
+        {{/if}}
         <a href="/About" class="link" id="">
             About
         </a>

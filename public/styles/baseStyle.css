@@ -19,6 +19,34 @@ BEIGE : #FAF0E1
   font-family: "Roboto", sans-serif;
 }
 
+.error-message {
+  background: #F02B63;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* REMOVE THE UGLY BACKGROUND OF SELECTED INPUTS */
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+} */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  text-size-adjust: auto;
+
+}
+
 /* 
 Prevents blue ugly box from appearing when user click on anything
 */
@@ -40,7 +68,7 @@ Prevents blue ugly box from appearing when user click on anything
 
 #mainNav {
   justify-content: space-between;
-  background-color: #fbbf2d;
+  background-color: white;
   width: 100vw;
   box-shadow: 1px 1px 2px 2px rgb(153, 118, 30);
   padding-right: 1em;
@@ -66,7 +94,7 @@ Prevents blue ugly box from appearing when user click on anything
 .link {
   font-family: arial;
   display: inline-block;
-  color: white;
+  color: black;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -114,16 +142,15 @@ Prevents blue ugly box from appearing when user click on anything
   border: none;
   background-color: rgb(251, 191, 45);
   color: white;
-  border-radius: 50px;
   transform: scale(1);
   transition: all 1s ease;
-  box-shadow: 3px 3px 0px 0px rgb(82, 72, 48);
+  box-shadow: 5px 5px 0px 0px rgb(82, 72, 48);
   height: 60px;
   z-index: 0;
 }
 
 .btn:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.01);
   background-color: rgb(243, 153, 5);
 }

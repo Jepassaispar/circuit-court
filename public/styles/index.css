@@ -13,6 +13,7 @@ BEIGE : #FAF0E1
 */
 
 body {
+  background-image: url(../img/home/paris-background.jpg);
   /* overflow: hidden; */
 }
 
@@ -75,7 +76,8 @@ div {
 #description {
   display: block;
   font-size: 2em;
-  color: #2f5da8;
+  /* color: #2f5da8; */
+  color: white;
   line-height: 1.5em;
 }
 
