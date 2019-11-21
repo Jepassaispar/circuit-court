@@ -3,23 +3,23 @@
         <h1 class="form-title">Great to see you again !</h1>
     </header>
 
-    <form method="post" action="/signin" id="form_user">
+    <form method="post" action="/logIn" id="form_user">
         <div class="form-item-wrapper flexed-item">
-            <label for="email" class="label-ref label">Email</label>
-            <input id="email" type="email" class="box-shadow-input input-text input"
-                placeholder="albert.biceps@gmail.com" required value="yo@gui.com">
+            <input id="emailLogin" type="email" class="input" placeholder="albert.biceps@gmail.com" name="email"
+                required>
         </div>
         <div class="form-item-wrapper flexed-item">
-            <label for="password" class="label-ref label">Password</label>
-            <input id="password" type="password" class="box-shadow-input input-text input" placeholder="••••••" required
-                value="1234">
+            <input id="passwordLogin" type="password" class="input" name="password" placeholder="••••••" required>
         </div>
+        {{#if errorMessage}}
+        <div class="error-message">{{ errorMessage }}</div>
+        {{/if}}
         <button class="btn logButton">Log in !</button>
     </form>
     <button href="" class="button-link-form schedules popup">Forgot username / password ?</button>
     <div id="popup" class="popup">
         <span class="popuptext" id="popuptext">
-            <button id=" closePopUp" class="closePopUps">close</button>
+            <button id="closePopUp" class="closePopUps">close</button>
             You're fucked mate !
     </div>
     </span>

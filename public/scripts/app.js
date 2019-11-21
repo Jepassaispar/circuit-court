@@ -73,7 +73,7 @@ function toggleVisibility(i) {
 function setListeners() {
   var schedules = document.querySelectorAll(".schedules");
   schedules.forEach((schedule, i) => {
-    schedule.onclick = function() {
+    schedule.onclick = function () {
       toggleVisibility(i);
     };
   });
@@ -95,4 +95,9 @@ function popUpsListeners() {
 
 popUpsListeners();
 
-export { setListeners, popUpsListeners, placeBusinesses, markers };
+export {
+  setListeners,
+  popUpsListeners,
+  placeBusinesses,
+  markers
+};
