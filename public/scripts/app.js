@@ -95,6 +95,14 @@ function popUpsListeners() {
 
 popUpsListeners();
 
+
+
+
+////////////INDEX NAVBAR EVENT LISTENER///////////////////
+
+
+
+
 export {
   setListeners,
   popUpsListeners,

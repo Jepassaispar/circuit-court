@@ -12,6 +12,7 @@ PINK: rgb(249,204,211) / #F9CCD3
 BEIGE : #FAF0E1
 */
 
+
 * {
   margin: 0;
   padding: 0;
@@ -69,8 +70,29 @@ Prevents blue ugly box from appearing when user click on anything
   justify-content: space-between;
   background-color: white;
   width: 100vw;
-  box-shadow: 1px 1px 2px 2px rgb(153, 118, 30);
   padding-right: 1em;
+  font-size: 1.3em;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 1px 1px 1px 1px gray;
+
+}
+
+.mainNavVisible {
+  transition: all .3s linear;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.link {
+  display: inline-block;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.colorBlack {
+  color: white !important;
 }
 
 /* #mainNav {
@@ -90,25 +112,22 @@ Prevents blue ugly box from appearing when user click on anything
   font-size: 1.2rem;
 } */
 
-.link {
-  display: inline-block;
-  color: black;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+
 
 .is-active {
   color: rgb(8, 129, 138);
 }
 
-[class="link"]:hover {
-  background-color: rgb(243, 153, 5);
+.link:hover {
+  background-color: rgb(243, 153, 5) !important;
 }
 
 /* //////////////LOGO////////////// */
 
 #logoContainer {
   color: #08818a;
+  margin-left: .5em;
+  padding: .1em;
 }
 
 #logoPart1,
@@ -117,15 +136,15 @@ Prevents blue ugly box from appearing when user click on anything
 }
 
 #logoPart1 {
-  font-size: 3rem;
+  font-size: 3.4rem;
   margin-top: -6px;
   font-weight: bold;
 }
 
 #logoPart2 {
   flex-direction: column;
-  font-size: 1.4rem;
-  line-height: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.2rem;
   margin-top: 5px;
 }
 
