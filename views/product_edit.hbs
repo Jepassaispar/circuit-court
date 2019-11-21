@@ -3,7 +3,7 @@
     <form action="/product-edit/{{business._id}}" method="post" enctype="multipart/form-data">
         <div class="form-item-wrapper flexed-item">
             <label for="image-img" class="image">Image</label>
-            <input id="image-img" type="file" class="image input">
+            <input name="image" id="image-img" type="file" class="image input">
         </div>
         <div class="nameBusiness">
             <label for="name">Name</label>
@@ -60,5 +60,5 @@
         <div class="bioBusiness">
             <label for="bio">Bio ?</label> <input type="checkbox" id="bio" name="bio">
         </div>
+        <button>Edit !</button>
     </form>
-    <button>Edit !</button>

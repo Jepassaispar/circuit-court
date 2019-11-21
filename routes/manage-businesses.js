@@ -15,11 +15,11 @@ router.get("/manage-businesses", (req, res, next) => {
 
 module.exports = router;
 
-router.post("/create-product", (req, res) => {
+router.post("/create-product", uploader.single("image"), (req, res) => {
   const createdBusiness = {
     name: req.body.name,
     business: req.body.category,
-    bio: req.body.bio.checked,
+    bio: req.body.bio ? true : false,
     lieu: {
       adress: req.body.adress,
       zipcode: req.body.zipcode
@@ -29,16 +29,18 @@ router.post("/create-product", (req, res) => {
     site: req.body.site,
     mail: req.body.mail,
     ouverture: {
-      lundi: req.body.lundi,
-      mardi: req.body.mardi,
-      mercredi: req.body.mercredi,
-      jeudi: req.body.jeudi,
-      vendredi: req.body.vendredi,
-      samedi: req.body.samedi,
-      dimanche: req.body.dimanche
-    },
-    image: req.body.image
+      Lundi: req.body.lundi,
+      Mardi: req.body.mardi,
+      Mercredi: req.body.mercredi,
+      Jeudi: req.body.jeudi,
+      Vendredi: req.body.vendredi,
+      Samedi: req.body.samedi,
+      Dimanche: req.body.dimanche
+    }
   };
+
+  if (req.file) createdBusiness.image = req.file.secure_url
+
   businessModel
     .create(createdBusiness)
     .then(dbRes => {
@@ -54,22 +56,25 @@ router.post("/product-delete/:id", (req, res) => {
     .then(res.redirect("/manage-businesses"));
 });
 
-router.get("/product-edit/:id", (req, res) => {
+router.get("/product-edit/:id", (req, res, next) => {
   Promise.all([businessModel.findById(req.params.id)])
     .then(dbRes => {
       const business = dbRes[0];
+      console.log(business)
       res.render("product_edit", {
-        business
+        business,
+        js: ["app", "filter", "script"],
+        css: ["baseStyle", "mainPage"]
       });
     })
     .catch(err => console.log(err));
 });
 
-router.post("/product-edit/:id", (req, res) => {
+router.post("/product-edit/:id", uploader.single("image"), (req, res) => {
   const editedBusiness = {
     name: req.body.name,
     business: req.body.category,
-    bio: req.body.bio.checked,
+    bio: req.body.bio ? true : false,
     lieu: {
       adress: req.body.adress,
       zipcode: req.body.zipcode
@@ -79,23 +84,22 @@ router.post("/product-edit/:id", (req, res) => {
     site: req.body.site,
     mail: req.body.mail,
     ouverture: {
-      lundi: req.body.lundi,
-      mardi: req.body.mardi,
-      mercredi: req.body.mercredi,
-      jeudi: req.body.jeudi,
-      vendredi: req.body.vendredi,
-      samedi: req.body.samedi,
-      dimanche: req.body.dimanche
+      Lundi: req.body.lundi,
+      Mardi: req.body.mardi,
+      Mercredi: req.body.mercredi,
+      Jeudi: req.body.jeudi,
+      Vendredi: req.body.vendredi,
+      Samedi: req.body.samedi,
+      Dimanche: req.body.dimanche
     },
-    image:
-      "https://static.aujardin.info/cache/th/img8/potager-carres-600x450.webp?1"
   };
-  if (req.file) {
-    editedBusiness.image = req.file.secure_url;
-  } else
+  if (req.file) createdBusiness.image = req.file.secure_url
+  else {
     businessModel
       .findByIdAndUpdate(req.params.id, editedBusiness)
       .then(dbRes => {
-        res.redirect("/");
+        console.log("Salut c'est la dbres" + dbRes)
+        res.redirect("/mainPage");
       });
+  }
 });

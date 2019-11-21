@@ -28,10 +28,10 @@
 
     <div class="create-container">
 
-        <form action="/create-product" method="post">
+        <form action="/create-product" method="post" enctype="multipart/form-data">
             <div class="form-item-wrapper flexed-item">
                 <label for="image-img" class="image">Image</label>
-                <input id="image-img" type="file" class="image input">
+                <input name="image" id="image-img" type="file" class="image input">
             </div>
             <div class="nameBusiness">
                 <label for="name">Name</label>
@@ -66,19 +66,19 @@
                 <span>Schedule</span>
                 <div class="dayofBusiness">
                     <label for="lundi" class="label">Monday : </label>
-                    <input type="text" class="input" name="input" id="lundi" placeholder="10:00-20:30">
+                    <input type="text" class="input" name="lundi" id="lundi" placeholder="10:00-20:30">
                     <label for="" class="label">Tuesday : </label>
                     <input type="text" class="input" name="mardi" id="mardi" placeholder="10:00-20:30">
                     <label for="" class="label">Wednesday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30">
+                    <input type="text" class="input" placeholder="10:00-20:30" name="mercredi">
                     <label for="" class="label">Thursday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30">
+                    <input type="text" class="input" placeholder="10:00-20:30" name="jeudi">
                     <label for="" class="label">Friday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30">
+                    <input type="text" class="input" placeholder="10:00-20:30" name="vendredi">
                     <label for="" class="label">Saturday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30">
+                    <input type="text" class="input" placeholder="10:00-20:30" name="samedi">
                     <label for="" class="label">Sunday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30">
+                    <input type="text" class="input" placeholder="10:00-20:30" name="dimanche">
                 </div>
             </div>
             <div class="infoBusiness">
