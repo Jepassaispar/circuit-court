@@ -12,6 +12,7 @@ router.get("/mainPage", (req, res) => {
       const zipcodes = [...new Set(dbRes.map(b => b.lieu.zipcode))].sort(
         (a, b) => a - b
       );
+      console.log("zip", zipcodes)
       res.render("mainPage", {
         js: ["app", "filter"],
         css: ["baseStyle", "mainPage"],
@@ -35,13 +36,13 @@ router.post("/filter-mainPage", (req, res) => {
       });
     } else
       businessModel
-        .find({
-          "lieu.zipcode": query.zipcode
-        })
-        .then(dbRes => {
-          res.send(dbRes);
-        })
-        .catch(err => console.log(err));
+      .find({
+        "lieu.zipcode": query.zipcode
+      })
+      .then(dbRes => {
+        res.send(dbRes);
+      })
+      .catch(err => console.log(err));
   } else if (req.body.kob != undefined) {
     query.kob = req.body.kob;
     if (req.body.kob.length === 0) {
@@ -59,6 +60,9 @@ router.post("/filter-mainPage", (req, res) => {
         })
         .catch(err => console.log(err));
     }
+  } else if (req.body.kob != undefined && req.body.zipcode != undefined) {
+    query.kob = req.body.kob;
+    query.zipcode = req.body.zipcode;
   }
 });
 
