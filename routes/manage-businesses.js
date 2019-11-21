@@ -19,11 +19,12 @@ router.post("/create-product", uploader.single("image"), (req, res) => {
   const createdBusiness = {
     name: req.body.name,
     business: req.body.category,
-<<<<<<< HEAD
-    bio: req.body.bio,
-=======
+    coordinates: req.body.coordinates,
     bio: req.body.bio ? true : false,
->>>>>>> e5d8f09def57c06636764e7d39b3d2f403984b96
+    location: {
+      type: "Point",
+      coordinates: [req.body.longitude, req.body.latitude]
+    },
     lieu: {
       adress: req.body.adress,
       zipcode: req.body.zipcode
@@ -43,7 +44,7 @@ router.post("/create-product", uploader.single("image"), (req, res) => {
     }
   };
 
-  if (req.file) createdBusiness.image = req.file.secure_url
+  if (req.file) createdBusiness.image = req.file.secure_url;
 
   businessModel
     .create(createdBusiness)
@@ -65,7 +66,7 @@ router.get("/product-edit/:id", (req, res, next) => {
   Promise.all([businessModel.findById(req.params.id)])
     .then(dbRes => {
       const business = dbRes[0];
-      console.log(business)
+      console.log(business);
       res.render("product_edit", {
         business,
         js: ["app", "filter", "script"],
@@ -79,6 +80,10 @@ router.post("/product-edit/:id", uploader.single("image"), (req, res) => {
   const editedBusiness = {
     name: req.body.name,
     business: req.body.category,
+    location: {
+      type: "Point",
+      coordinates: [req.body.longitude, req.body.latitude]
+    },
     bio: req.body.bio ? true : false,
     lieu: {
       adress: req.body.adress,
@@ -96,14 +101,15 @@ router.post("/product-edit/:id", uploader.single("image"), (req, res) => {
       Vendredi: req.body.vendredi,
       Samedi: req.body.samedi,
       Dimanche: req.body.dimanche
-    },
+    }
   };
-  if (req.file) createdBusiness.image = req.file.secure_url
+  if (req.file) createdBusiness.image = req.file.secure_url;
   else {
     businessModel
       .findByIdAndUpdate(req.params.id, editedBusiness)
       .then(dbRes => {
-        console.log("Salut c'est la dbres" + dbRes)
+        console.log(req.body.longitude);
+        console.log(req.body.latitude);
         res.redirect("/mainPage");
       });
   }
