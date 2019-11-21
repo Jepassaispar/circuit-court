@@ -8,10 +8,12 @@ router.get("/mainPage", (req, res) => {
     .find()
     .then(dbRes => {
       const businesses = dbRes;
+      const kindOfBusinesses = [...new Set(dbRes.map(b => b.kindOfBusines))];
       res.render("mainPage", {
         js: ["app", "filter"],
         css: ["baseStyle", "mainPage"],
-        businesses: businesses
+        businesses: businesses,
+        kindOfBusinesses: kindOfBusinesses
       });
     })
 
