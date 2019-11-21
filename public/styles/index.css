@@ -13,15 +13,26 @@ BEIGE : #FAF0E1
 */
 
 body {
-  background-image: url(../img/home/paris-background.jpg);
-  /* overflow: hidden; */
+  background: no-repeat top url(../img/home/paris-background.jpg);
+  height: 500vh;
+  /* -webkit-transform: translateZ(-999px) scale(2);
+  transform: translateZ(-999px) scale(2);
+  z-index: 3; */
 }
 
-#mainNav {
-  position: fixed;
-  width: 100vw;
+.forefront-element {
+  -webkit-transform: translateZ(999px) scale(.7);
+  transform: translateZ(999px) scale(.7);
   z-index: 1;
 }
+
+.base-element {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
+}
+
+.background-element {}
 
 #mainContainer,
 #firsHalfContainer,
@@ -63,11 +74,6 @@ div {
   padding: 5em;
 }
 
-.logo {
-  font-weight: bold;
-  color: #08818a;
-}
-
 #description,
 #seemore {
   padding: 1em;
@@ -76,7 +82,6 @@ div {
 #description {
   display: block;
   font-size: 2em;
-  /* color: #2f5da8; */
   color: white;
   line-height: 1.5em;
 }

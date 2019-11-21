@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express();
-const userModel = require("./../models/User");
+const userModel = require("./../Models/user");
 const uploader = require("../config/cloudinary");
 const bcrypt = require("bcryptjs");
 const bcryptSalt = 10;
@@ -31,6 +31,7 @@ router.post("/signup", (req, res) => {
         })
         .then(dbRes => {
             if (dbRes) {
+                console.log("coucou")
                 res.render("signUp", {
                     css: ["baseStyle", "sign"],
                     errorMessage: "Email already taken"

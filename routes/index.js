@@ -7,7 +7,7 @@ const uploader = require("../config/cloudinary");
 
 router.get("/", (req, res) => {
   res.render("index", {
-    js: "app",
+    js: ["index"],
     css: ["baseStyle", "index"]
   });
 });
