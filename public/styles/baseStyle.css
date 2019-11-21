@@ -32,13 +32,6 @@ BEIGE : #FAF0E1
 
 
 /* REMOVE THE UGLY BACKGROUND OF SELECTED INPUTS */
-/* input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
-} */
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -48,7 +41,7 @@ input:-webkit-autofill:active {
 }
 
 /* 
-Prevents blue ugly box from appearing when user click on anything
+Prevents blue ugly box border from appearing when user clicks
 */
 *:focus {
   outline: none;

@@ -31,6 +31,7 @@ router.post("/signup", (req, res) => {
         })
         .then(dbRes => {
             if (dbRes) {
+                console.log("coucou")
                 res.render("signUp", {
                     css: ["baseStyle", "sign"],
                     errorMessage: "Email already taken"
