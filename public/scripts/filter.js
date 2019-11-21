@@ -6,6 +6,7 @@ import {
 } from "./app.js";
 
 const checkBoxes = document.querySelectorAll("[name='zipcode']");
+const checkBoxesKoB = document.querySelectorAll("[name='kindofBusiness']");
 const businessContainer = document.querySelector(".list");
 
 checkBoxes.forEach(checkbox => {
@@ -25,25 +26,32 @@ checkBoxes.forEach(checkbox => {
 
         businessContainer.innerHTML = "";
         filteredZipcode.forEach((business, i) => {
-          businessContainer.innerHTML += `<div>
-          <div class="name">${business.name}</div>
-
-          <p>Adresse : ${business.lieu.adress} <br> ${business.lieu.zipcode} Paris </p>
-          <div class="popUpParentDiv">
-              <button class="schedules popup" >Horaires</button>
-              <div id="popup${i}" class="popup">
-                  <span class="popuptext" id="popuptext${i}">
-                      <button id="closePopUp${i}" class="closePopUps">close</button>
-                      <div class="weekContainer">
-                          <li class="day"><span>Lundi : </span>${business.ouverture.Lundi}</li>
-                          <li class="day"><span>Mardi : </span>${business.ouverture.Mardi}</li>
-                          <li class="day"><span>Mercredi : </span>${business.ouverture.Mercredi}</li>
-                          <li class="day"><span>Jeudi : </span>${business.ouverture.Jeudi}</li>
-                          <li class="day"><span>Vendredi : </span>${business.ouverture.Vendredi}</li>
-                          <li class="day"><span>Samedi : </span>${business.ouverture.Samedi}</li>
-                          <li class="day"><span>Dimanche : </span>${business.ouverture.Dimanche}</li>
-                      </div>
-                  </span>
+          businessContainer.innerHTML += ` 
+             <div class="fullBusiness">
+          <div class="img-container">
+              <img class="img" src="{{this.image}}" alt="coucou">
+          </div>
+          <div class="business">
+              <div class="businessType">${business.business}</div>
+              <div class="name">${business.name}</div>
+              <p class="adresse">Adresse : ${business.lieu.adress} <br> ${business.lieu.zipcode} Paris </p>
+              <div class="popUpParentDiv">
+                  <button class="schedules popup" href="">Horaires</button>
+                  <a href="/mainPage/${business._id}">See more...</a>
+                  <div id="popup${i}" class="popup">
+                      <span class="popuptext" id="popuptext${i}">
+                          <button id="closePopUp${i}" class="closePopUps">close</button>
+                          <div class="weekContainer">
+                              <li class="day"><span>Lundi : </span>${business.ouverture.Lundi}</li>
+                              <li class="day"><span>Mardi : </span>${business.ouverture.Mardi}</li>
+                              <li class="day"><span>Mercredi : </span>${business.ouverture.Mercredi}</li>
+                              <li class="day"><span>Jeudi : </span>${business.ouverture.Jeudi}</li>
+                              <li class="day"><span>Vendredi : </span>${business.ouverture.Vendredi}</li>
+                              <li class="day"><span>Samedi : </span>${business.ouverture.Samedi}</li>
+                              <li class="day"><span>Dimanche : </span>${business.ouverture.Dimanche}</li>
+                          </div>
+                      </span>
+                  </div>
               </div>
           </div>
       </div>
@@ -58,3 +66,5 @@ checkBoxes.forEach(checkbox => {
       .catch(err => console.log(err));
   };
 });
+
+// function replaceInnerHtml()

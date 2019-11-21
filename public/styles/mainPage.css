@@ -107,7 +107,7 @@ BEIGE : #FAF0E1
 }
 
 .img {
-  width: 100%
+  width: 100%;
 }
 
 .business {
@@ -116,6 +116,8 @@ BEIGE : #FAF0E1
 
 .fullBusiness {
   display: flex;
+  border-top: solid 1px black;
+  padding: 50px;
 }
 
 .businessType {
