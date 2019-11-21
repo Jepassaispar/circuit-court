@@ -12,13 +12,13 @@ PINK: rgb(249,204,211) / #F9CCD3
 BEIGE : #FAF0E1
 */
 
+
 body {
-  background-image: url(../img/home/paris-background.jpg),
-    url(../img/home/background-leaves-image.jpg);
-  background-repeat: no-repeat, repeat;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/home/paris-background.jpg), url(../img/home/background-leaves-image.jpg);
   height: 500vh;
 }
+
 
 #mainContainer,
 #firsHalfContainer,

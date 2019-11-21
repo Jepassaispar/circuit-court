@@ -15,6 +15,12 @@ window.addEventListener("scroll", function toggleNavVisibility() {
 (function () {
     var parallax = document.querySelectorAll("body"),
         speed = .3;
+    window.addEventListener("DOMContentLoaded", function () {
+        console.log("loaded");
+
+        parallax[0].style.backgroundPosition = "50% 0px";
+    });
+
     window.onscroll = function () {
         [].slice.call(parallax).forEach(function (el, i) {
             var windowYOffset = window.pageYOffset,
