@@ -4,7 +4,6 @@ import {
   placeBusinesses,
   markers
 } from "./app.js";
-// import { get } from "mongoose";
 
 const checkBoxes = document.querySelectorAll("[name='zipcode']");
 const businessContainer = document.querySelector(".list");
