@@ -8,12 +8,16 @@ router.get("/mainPage", (req, res) => {
     .find()
     .then(dbRes => {
       const businesses = dbRes;
-      const kindOfBusinesses = [...new Set(dbRes.map(b => b.kindOfBusines))];
+      const kindOfBusinesses = [...new Set(dbRes.map(b => b.business))];
+      const zipcodes = [...new Set(dbRes.map(b => b.lieu.zipcode))].sort(
+        (a, b) => a - b
+      );
       res.render("mainPage", {
         js: ["app", "filter"],
         css: ["baseStyle", "mainPage"],
         businesses: businesses,
-        kindOfBusinesses: kindOfBusinesses
+        kindOfBusinesses: kindOfBusinesses,
+        zipcodes: zipcodes
       });
     })
 
