@@ -2,23 +2,23 @@
     <header class="form-header">
         <h1 class="form-title">Let's start eating better</h1>
     </header>
-    <form method="post" action="/signup" id="form_user"></form>
-    <div class="form-item-wrapper flexed-item">
-        <input id="firstname" type="text" class="input" placeholder="Firstname" firstname="firstname" required>
-    </div>
-    <div class="form-item-wrapper flexed-item">
-        <input id="lastname" type="text" class="input" placeholder="Lastname" name="lastname" required>
-    </div>
-    <div class="form-item-wrapper flexed-item">
-        <input id="email" type="email" class="input" placeholder="your@email.com" name="email" required>
-    </div>
-    <div class="form-item-wrapper flexed-item">
-        <input id="password" type="password" class="input" placeholder="Password" name="password" required>
-    </div>
-    {{#if errorMessage}}
-    <div class="error-message">{{ errorMessage }}</div>
-    {{/if}}
-    <button class="btn logButton">Create Account</button>
+    <form method="post" action="/signup" id="form_user">
+        <div class="form-item-wrapper flexed-item">
+            <input id="firstname" type="text" class="input" placeholder="Firstname" firstname="firstname" required>
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <input id="lastname" type="text" class="input" placeholder="Lastname" name="lastname" required>
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <input id="email" type="email" class="input" placeholder="your@email.com" name="email" required>
+        </div>
+        <div class="form-item-wrapper flexed-item">
+            <input id="password" type="password" class="input" placeholder="Password" name="password" required>
+        </div>
+        {{#if errorMessage}}
+        <div class="error-message">{{ errorMessage }}</div>
+        {{/if}}
+        <button class="btn logButton">Create Account</button>
     </form>
     <p class="form-sub-infos">Already have an account ? <a href="/logIn" class="button-link-form">Log In</a></p>
 </section>

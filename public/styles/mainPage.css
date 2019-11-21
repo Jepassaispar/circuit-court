@@ -54,9 +54,9 @@ BEIGE : #FAF0E1
   color: black;
   width: 12rem;
   font-size: 1rem;
-  background-color: rgb(251, 191, 45);
+  background-color: white;
   /* border-radius: 30px; */
-  border: none;
+  border: solid 1px rgb(243, 153, 5);
   box-shadow: rgb(243, 153, 5) 2px 2px;
   visibility: hidden;
   padding: 1em;
@@ -70,7 +70,7 @@ BEIGE : #FAF0E1
 }
 
 .closePopUps {
-  background-color: rgb(251, 191, 45);
+  background-color: white;
   width: 50px;
   color: rgb(8, 129, 138);
   border: none;
@@ -131,3 +131,16 @@ BEIGE : #FAF0E1
   font-style: italic;
   margin-bottom: 10px;
 }
+
+/* Customize the label (the container) */
+/* .container {
+  display: block;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
