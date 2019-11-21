@@ -36,6 +36,9 @@ function placeOneBusiness(Business) {
   const longitude = Business.location.coordinates[1];
   const latitude = Business.location.coordinates[0];
   const type = Business.business;
+
+  console.log("type ?", type);
+
   markers.push(
     new google.maps.Marker({
       position: {
@@ -73,7 +76,7 @@ function toggleVisibility(i) {
 function setListeners() {
   var schedules = document.querySelectorAll(".schedules");
   schedules.forEach((schedule, i) => {
-    schedule.onclick = function () {
+    schedule.onclick = function() {
       toggleVisibility(i);
     };
   });
@@ -95,17 +98,6 @@ function popUpsListeners() {
 
 popUpsListeners();
 
-
-
-
 ////////////INDEX NAVBAR EVENT LISTENER///////////////////
 
-
-
-
-export {
-  setListeners,
-  popUpsListeners,
-  placeBusinesses,
-  markers
-};
+export { setListeners, popUpsListeners, placeBusinesses, markers };

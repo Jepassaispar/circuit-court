@@ -87,9 +87,15 @@ router.post("/product-edit/:id", (req, res) => {
       samedi: req.body.samedi,
       dimanche: req.body.dimanche
     },
-    image: req.body.image
+    image:
+      "https://static.aujardin.info/cache/th/img8/potager-carres-600x450.webp?1"
   };
-  businessModel.findByIdAndUpdate(req.params.id, editedBusiness).then(dbRes => {
-    res.redirect("/");
-  });
+  if (req.file) {
+    editedBusiness.image = req.file.secure_url;
+  } else
+    businessModel
+      .findByIdAndUpdate(req.params.id, editedBusiness)
+      .then(dbRes => {
+        res.redirect("/");
+      });
 });
