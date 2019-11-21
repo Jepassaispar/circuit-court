@@ -16,6 +16,7 @@ body {
   background-image: url(../img/home/paris-background.jpg),
     url(../img/home/background-leaves-image.jpg);
   background-repeat: no-repeat, repeat;
+  background-position: center;
   height: 500vh;
 }
 
@@ -67,8 +68,9 @@ div {
   padding: 1em;
 }
 
-#description {
-  padding-bottom: 10vh;
+#siteDescription {
+  margin: 20vh;
+  margin-top: 20vh;
 }
 
 .description {
@@ -102,6 +104,7 @@ div {
 #secondHalfContainer {
   background-color: #faf0e1;
   background-size: cover;
+  height: 100 vh;
 }
 
 #cardContainer {

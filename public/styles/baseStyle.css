@@ -155,7 +155,7 @@ Prevents blue ugly box border from appearing when user clicks
   transform: scale(1);
   transition: all 1s ease;
   box-shadow: 5px 5px 0px 0px rgb(82, 72, 48);
-  height: 60px;
+  min-height: 6git0px;
   z-index: 0;
 }
 
