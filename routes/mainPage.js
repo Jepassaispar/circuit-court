@@ -26,21 +26,39 @@ router.get("/mainPage", (req, res) => {
 
 router.post("/filter-mainPage", (req, res) => {
   const query = {};
-  if (req.body.zipcode.length > 0) {
+  if (req.body.zipcode != undefined) {
     query.zipcode = req.body.zipcode;
-    businessModel
-      .find({
-        "lieu.zipcode": query.zipcode
-      })
-      .then(dbRes => {
-        res.send(dbRes);
-      })
-      .catch(err => console.log(err));
-  } else {
-    businessModel.find().then(dbRes2 => {
-      const allbusinesses = dbRes2;
-      res.send(allbusinesses);
-    });
+    if (req.body.zipcode.length === 0) {
+      businessModel.find().then(dbRes2 => {
+        const allbusinesses = dbRes2;
+        res.send(allbusinesses);
+      });
+    } else
+      businessModel
+        .find({
+          "lieu.zipcode": query.zipcode
+        })
+        .then(dbRes => {
+          res.send(dbRes);
+        })
+        .catch(err => console.log(err));
+  } else if (req.body.kob != undefined) {
+    query.kob = req.body.kob;
+    if (req.body.kob.length === 0) {
+      businessModel.find().then(dbRes2 => {
+        const allbusinesses = dbRes2;
+        res.send(allbusinesses);
+      });
+    } else {
+      businessModel
+        .find({
+          business: query.kob
+        })
+        .then(dbRes => {
+          res.send(dbRes);
+        })
+        .catch(err => console.log(err));
+    }
   }
 });
 
