@@ -10,7 +10,7 @@ const map = new google.maps.Map(document.getElementById("mapDisplay"), {
 var iconBase =
   "https://res.cloudinary.com/dawdmintj/image/upload/v1573824978/user-pictures/";
 var icons = {
-  market: iconBase + "redmarker2_r4enia.jpg",
+  market: iconBase + "pngguru.com_1_bodhm5.png",
   amap: iconBase + "google-map-icon-png-8_bloyi7.png",
   garden: iconBase + "yellowmarker2_m5ah3a.png"
 };
