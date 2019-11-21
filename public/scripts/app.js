@@ -37,8 +37,6 @@ function placeOneBusiness(Business) {
   const latitude = Business.location.coordinates[0];
   const type = Business.business;
 
-  console.log("type ?", type);
-
   markers.push(
     new google.maps.Marker({
       position: {
