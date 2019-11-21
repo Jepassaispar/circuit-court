@@ -66,7 +66,6 @@ router.get("/product-edit/:id", (req, res, next) => {
   Promise.all([businessModel.findById(req.params.id)])
     .then(dbRes => {
       const business = dbRes[0];
-      console.log(business);
       res.render("product_edit", {
         business,
         js: ["app", "filter", "script"],
