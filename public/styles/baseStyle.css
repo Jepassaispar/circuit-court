@@ -44,7 +44,6 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
   text-size-adjust: auto;
-
 }
 
 /* 
@@ -92,7 +91,6 @@ Prevents blue ugly box from appearing when user click on anything
 } */
 
 .link {
-  font-family: arial;
   display: inline-block;
   color: black;
   padding: 14px 16px;
@@ -140,7 +138,7 @@ Prevents blue ugly box from appearing when user click on anything
   width: 20vw;
   min-width: 200px;
   border: none;
-  background-color: rgb(251, 191, 45);
+  background-color: #08818A;
   color: white;
   transform: scale(1);
   transition: all 1s ease;
