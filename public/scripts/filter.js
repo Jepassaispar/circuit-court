@@ -25,7 +25,6 @@ function filter(checkboxes, targetAttribute, payloadName) {
         .post(`https://circuit-court.herokuapp.com/filter-mainPage`, payload)
         .then(myAPIRes => {
           const filteredZipcode = myAPIRes.data;
-
           businessContainer.innerHTML = "";
           filteredZipcode.forEach((business, i) => {
             businessContainer.innerHTML += ` 
