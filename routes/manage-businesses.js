@@ -19,7 +19,7 @@ router.post("/create-product", (req, res) => {
   const createdBusiness = {
     name: req.body.name,
     business: req.body.category,
-    bio: req.body.bio.checked,
+    bio: req.body.bio,
     lieu: {
       adress: req.body.adress,
       zipcode: req.body.zipcode
@@ -42,6 +42,7 @@ router.post("/create-product", (req, res) => {
   businessModel
     .create(createdBusiness)
     .then(dbRes => {
+      console.log(req.body.name);
       console.log("data well entered in database");
       res.redirect("/mainPage");
     })
