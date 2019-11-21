@@ -31,7 +31,10 @@ const businessSchema = new Schema({
     Samedi: String,
     Dimanche: String
   },
-  image: String
+  image: {
+    type: String,
+    default: "https://static.aujardin.info/cache/th/img8/potager-carres-600x450.webp?1"
+  }
 });
 
 businessSchema.index({

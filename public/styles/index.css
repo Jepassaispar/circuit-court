@@ -67,6 +67,10 @@ div {
   padding: 1em;
 }
 
+#description {
+  padding-bottom: 10vh;
+}
+
 .description {
   display: block;
   font-size: 2em;
@@ -75,7 +79,6 @@ div {
 }
 
 #gardenDescription {
-  text-align: center;
   font-size: 3.5rem;
   font-weight: bold;
   padding: 0 10rem;
@@ -97,7 +100,7 @@ div {
 /* SECOND HALF INDEX */
 
 #secondHalfContainer {
-  background-image: url(../img/home/background-shared-garden.jpg);
+  background-color: #faf0e1;
   background-size: cover;
 }
 
