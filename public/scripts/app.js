@@ -74,7 +74,7 @@ function toggleVisibility(i) {
 function setListeners() {
   var schedules = document.querySelectorAll(".schedules");
   schedules.forEach((schedule, i) => {
-    schedule.onclick = function() {
+    schedule.onclick = function () {
       toggleVisibility(i);
     };
   });
@@ -98,4 +98,30 @@ popUpsListeners();
 
 ////////////INDEX NAVBAR EVENT LISTENER///////////////////
 
-export { setListeners, popUpsListeners, placeBusinesses, markers };
+export {
+  setListeners,
+  popUpsListeners,
+  placeBusinesses,
+  markers
+};
+
+////////////PARALAAAAAAAAAAX///////////////////
+
+(function () {
+  var parallax = document.querySelectorAll("body"),
+    speed = .1;
+  window.addEventListener("DOMContentLoaded", function () {
+    console.log("loaded");
+
+    parallax[0].style.backgroundPosition = "50% 0px";
+  });
+
+  window.onscroll = function () {
+    [].slice.call(parallax).forEach(function (el, i) {
+      var windowYOffset = window.pageYOffset,
+        elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+      el.style.backgroundPosition = elBackgrounPos;
+    });
+  };
+})();
