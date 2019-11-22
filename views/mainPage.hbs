@@ -1,12 +1,18 @@
-<div class="filter">
+<button class="filter">
     <div class="zipcodes">
-        {{#each zipcodes}}
-        <div class="zipcode">
-            <label for="zipcode">{{this}}</label>
-            <input data-zipcode="{{this}}" type="checkbox" name="zipcode">
-            <span class="checkmark"></span>
+        <div class="test"></div>
+        <div class="test"></div>
+        <div class="test"></div>
+        <div class="inch">
+            {{#each zipcodes}}
+            <div class="zipcode">
+                <label for="zipcode">{{this}}</label>
+                <input data-zipcode="{{this}}" type="checkbox" name="zipcode">
+                <span class="checkmark"></span>
+            </div>
+            {{/each}}
         </div>
-        {{/each}}
+
     </div>
     <div class="kindOfBusinesses">
         {{#each kindOfBusinesses}}
@@ -16,7 +22,7 @@
         </div>
         {{/each}}
     </div>
-</div>
+</button>
 <div class="container">
     <div class="list">
         {{#each businesses}}
