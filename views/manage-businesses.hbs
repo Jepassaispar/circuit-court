@@ -1,6 +1,6 @@
 <div class="big-container manage-products-wrapper">
     <div class="edit-delete-container">
-        <h3 class="manage-products-title">Manage the Database</h3>
+        <h3 class="manage-products-title title">Manage the Database</h3>
         <table class="product-manage-table">
             <thead>
                 <tr class="table-row">
@@ -27,6 +27,7 @@
     </div>
 
     <div class="create-container">
+        <h1 class="title">Create a Business</h1>
 
         <form action="/create-product" method="post" enctype="multipart/form-data">
             <div class="form-item-wrapper flexed-item">
@@ -39,8 +40,9 @@
             </div>
             <div class="coordinates">
                 <label for="coordinates">Coordinates</label>
-                <input type="number" step="0.0000001" name="longitude" id="coordinates1" placeholder="1234" required>
-                <input type="number" step="0.0000001" name="latitude" id="coordinates2" placeholder="4567" required>
+                <input type="number" step="0.0000001" name="longitude" id="coordinates1" placeholder="48.858273"
+                    required>
+                <input type="number" step="0.0000001" name="latitude" id="coordinates2" placeholder="2.294475" required>
             </div>
             <div class="form-item-wrapper flexed-item">
                 <label for="type" class="label">Type of Business</label>
@@ -69,26 +71,30 @@
             </div>
             <div class="scheduleBusiness">
                 <span>Schedule</span>
+
                 <div class="dayofBusiness">
-                    <label for="lundi" class="label">Monday : </label>
-                    <input type="text" class="input" name="lundi" id="lundi" placeholder="10:00-20:30">
-                    <label for="" class="label">Tuesday : </label>
-                    <input type="text" class="input" name="mardi" id="mardi" placeholder="10:00-20:30">
-                    <label for="" class="label">Wednesday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30" name="mercredi">
-                    <label for="" class="label">Thursday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30" name="jeudi">
-                    <label for="" class="label">Friday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30" name="vendredi">
-                    <label for="" class="label">Saturday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30" name="samedi">
-                    <label for="" class="label">Sunday : </label>
-                    <input type="text" class="input" placeholder="10:00-20:30" name="dimanche">
+
+                    <ul><label for="lundi" class="label">Monday : </label>
+                        <input type="text" class="input" name="lundi" id="lundi" placeholder="10:00-20:30"></ul>
+                    <ul><label for="" class="label">Tuesday : </label>
+                        <input type="text" class="input" name="mardi" id="mardi" placeholder="10:00-20:30"></ul>
+                    <ul><label for="" class="label">Wednesday : </label>
+                        <input type="text" class="input" placeholder="10:00-20:30" name="mercredi"></ul>
+                    <ul><label for="" class="label">Thursday : </label>
+                        <input type="text" class="input" placeholder="10:00-20:30" name="jeudi"></ul>
+                    <ul><label for="" class="label">Friday : </label>
+                        <input type="text" class="input" placeholder="10:00-20:30" name="vendredi"></ul>
+                    <ul><label for="" class="label">Saturday : </label>
+                        <input type="text" class="input" placeholder="10:00-20:30" name="samedi"></ul>
+                    <ul><label for="" class="label">Sunday : </label>
+                        <input type="text" class="input" placeholder="10:00-20:30" name="dimanche"></ul>
+
                 </div>
+
             </div>
             <div class="infoBusiness">
-                <label for="info">Description</label>
-                <input name="info" type="text"
+                <label for="info">Description :</label><br>
+                <input class="info" name="info" type="text"
                     placeholder="The sauvage carrot will help you reconnect with carrots and give them the place they deserve in your life">
             </div>
             <div class="bioBusiness">

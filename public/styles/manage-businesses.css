@@ -30,9 +30,40 @@ td {
 
  */
 
-
+.title {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 .table-image {
     max-width: 20vw;
     max-height: 20vh;
+}
+
+.big-container {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+}
+
+.create-container {
+    margin-top: 5%;
+}
+
+.info {
+    width: 40vw;
+    height: 50px;
+}
+
+div {
+    margin-top: 10px;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+.table-row {
+    text-align: center
 }
