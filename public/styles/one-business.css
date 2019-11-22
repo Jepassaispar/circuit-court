@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .container {
     display: flex;
     grid-template-columns: 4fr 4fr;

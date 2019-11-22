@@ -24,5 +24,11 @@ router.get("/api", (req, res, next) => {
   });
 });
 
+router.get("/about", (req, res) => {
+  res.render("about", {
+    css: ["baseStyle", "about"]
+  })
+})
+
 
 module.exports = router;

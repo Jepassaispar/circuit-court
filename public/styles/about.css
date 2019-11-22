@@ -1,0 +1,17 @@
+#nico,
+#ph {
+    margin-top: 50px;
+}
+
+.imgContainer {
+    width: 30vw;
+}
+
+img {
+    width: inherit;
+}
+
+p {
+    font-size: 2em;
+    padding: 50px 100px;
+}
