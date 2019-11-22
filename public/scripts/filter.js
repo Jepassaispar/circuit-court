@@ -24,7 +24,7 @@ function filter(checkboxes, targetAttribute, payloadName) {
 
   console.log(checkboxes)
   checkboxes.forEach(checkbox => {
-    checkbox.onclick = function (event) {
+    checkbox.onclick = function(event) {
       const checked = [];
       checkboxes.forEach(input => {
         if (input.checked === true) {
@@ -84,6 +84,12 @@ function filter(checkboxes, targetAttribute, payloadName) {
             markers.forEach(marker => marker.setMap(null));
           });
           placeBusinesses(filteredZipcode);
+          // checkBoxesKoB.forEach(kob =>
+          //   checkBoxesZipcode.forEach(zipcode => {
+          //     if (kob.checked === true && zipcode === true)
+          //       filter(checkboxes, targetAttribute, payloadName);
+          //   })
+          // );
         })
         .catch(err => console.log(err));
     };
@@ -92,5 +98,4 @@ function filter(checkboxes, targetAttribute, payloadName) {
 
 filter(checkBoxesZipcode, "data-zipcode", "zipcode");
 filter(checkBoxesKoB, "data-kindofBusiness", "kob");
-filter(allcheckBoxes, )
 // function replaceInnerHtml()
