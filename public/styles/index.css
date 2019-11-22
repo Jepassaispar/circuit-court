@@ -12,10 +12,20 @@ PINK: rgb(249,204,211) / #F9CCD3
 BEIGE : #FAF0E1
 */
 
+body {
+  margin-top: 0px;
+}
+
+#mainNav {
+  position: fixed;
+}
+
+
 
 body {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/home/paris-background.jpg), url(../img/home/background-leaves-image.jpg);
   background-repeat: no-repeat;
-  background-image: url(../img/home/paris-background.jpg), url(../img/home/background-leaves-image.jpg);
+
   height: 500vh;
 }
 
@@ -26,6 +36,7 @@ body {
 #descriptionContainer,
 #description,
 #secondHalfContainer,
+#thirdHalfContainer,
 div {
   display: flex;
 }
@@ -37,14 +48,6 @@ div {
 
 #mainContainer {
   height: 270vh;
-  justify-content: space-between;
-}
-
-#secondHalfContainer {
-  height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 #firstHalfContainer {
@@ -68,9 +71,14 @@ div {
   padding: 1em;
 }
 
+#seeMore {
+  color: white;
+}
+
 #siteDescription {
   margin: 20vh;
   margin-top: 20vh;
+  color: white;
 }
 
 .description {
@@ -78,13 +86,6 @@ div {
   font-size: 2em;
   color: white;
   line-height: 1.5em;
-}
-
-#gardenDescription {
-  font-size: 3.5rem;
-  font-weight: bold;
-  padding: 0 10rem;
-  color: rgb(8, 129, 138);
 }
 
 #homePic {
@@ -101,29 +102,55 @@ div {
 
 /* SECOND HALF INDEX */
 
-#secondHalfContainer {
-  background-color: #faf0e1;
-  background-size: cover;
-  height: 100 vh;
+#buttonGarden {
+  background-color: rgb(243, 153, 5);
+  color: #08818A;
 }
 
-#cardContainer {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
-  grid-gap: 5vw;
-  width: 100vw;
-  padding: 5vw;
-  height: 35vw;
+#buttonGarden:hover {
+  color: rgb(243, 153, 5);
+  background-color: rgb(120, 203, 209) !important;
 }
 
-.cards {
-  padding: 5vw;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+
+#secondHalfContainer,
+#thirdHalfContainer {
+  height: 100vh;
+  flex-direction: column;
   align-items: center;
-  border-radius: 50px;
-  border: solid black 1px;
+  justify-content: space-evenly;
+  background-color: #08818A;
+  background-size: cover;
+}
+
+#thirdHalfContainer {
+  position: absolute;
+  top: 420vh;
+  height: 80vh;
+  width: 100%;
+  background-color: rgb(243, 153, 5);
+}
+
+#gardenDescription,
+#marketDescription {
+  font-size: 3.5rem;
+  font-weight: bold;
+  padding: 0 10rem;
+  color: rgb(243, 153, 5);
+}
+
+#marketDescription {
+  color: #08818A;
+}
+
+#buttonMarket {
+  background-color: #08818A;
+  color: rgb(243, 153, 5);
+}
+
+#buttonMarket:hover {
+  color: #08818A;
+  background-color: rgb(235, 200, 107) !important;
 }
 
 .linkMap {

@@ -5,11 +5,11 @@
 
     <form method="post" action="/logIn" id="form_user">
         <div class="form-item-wrapper flexed-item">
-            <input id="emailLogin" type="email" class="input" placeholder="albert.biceps@gmail.com" name="email"
+            <input id="emailLogin" type="email" class="input log" placeholder="albert.biceps@gmail.com" name="email"
                 required>
         </div>
         <div class="form-item-wrapper flexed-item">
-            <input id="passwordLogin" type="password" class="input" name="password" placeholder="••••••" required>
+            <input id="passwordLogin" type="password" class="input log" name="password" placeholder="••••••" required>
         </div>
         {{#if errorMessage}}
         <div class="error-message">{{ errorMessage }}</div>

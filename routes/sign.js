@@ -7,7 +7,7 @@ const bcryptSalt = 10;
 
 router.get("/logIn", (req, res) => {
     res.render("logIn", {
-        css: ["baseStyle", "sign", "mainPage"],
+        css: ["baseStyle", "mainPage", "log"],
         js: "sign"
     });
 });
@@ -59,7 +59,7 @@ router.post('/logIn', (req, res) => {
     if (inputEmail === "" || inputPassword === "") {
         res.render('logIn', {
             errorMessage: "Please enter both, email and password to sign up",
-            css: ["baseStyle", "sign", "mainPage"],
+            css: ["baseStyle", "log", "mainPage"],
             js: "sign"
         })
         return;
@@ -72,7 +72,7 @@ router.post('/logIn', (req, res) => {
             if (!dbRes) {
                 res.render('logIn', {
                     errorMessage: "Email not registered yet",
-                    css: ["baseStyle", "sign", "mainPage"],
+                    css: ["baseStyle", "log", "mainPage"],
                     js: "sign"
                 })
             }
@@ -83,7 +83,7 @@ router.post('/logIn', (req, res) => {
             } else {
                 res.render('logIn', {
                     errorMessage: "Wrong password",
-                    css: ["baseStyle", "sign", "mainPage"],
+                    css: ["baseStyle", "log", "mainPage"],
                     js: "sign"
                 });
             }

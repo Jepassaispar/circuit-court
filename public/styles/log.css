@@ -1,28 +1,16 @@
-/* 
-
-//////////////COLORS//////////////
-
-YELLOW: rgb(251,191,45) / #FBBF2D
-ORANGE: rgb(243, 153, 5) /
-GREEN: rgb(8,129,138) / #08818A
-DARK-BLUE: rgb(47,93,168) / #2F5DA8
-LIGHT-BLUE: rgb(72,123,189) / #487BBD
-GREEN-GRAY: rgb(173,213,176) / #ADD5B0
-PINK: rgb(249,204,211) / #F9CCD3
-BEIGE : #FAF0E1
-*/
-
 body {
-    background: url(../img/home/background-sign.jpg);
+    background: url(../img/home/background-log.jpg) !important;
     background-size: cover;
     background-position: center;
     margin-top: 50px;
     overflow: hidden;
 }
 
+
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
+    text-size-adjust: none;
     font-size: 1.3em;
     transition: all 5000s ease-in-out 0s;
 }

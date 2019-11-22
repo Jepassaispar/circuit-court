@@ -4,16 +4,16 @@
     </header>
     <form method="post" action="/signup" id="form_user">
         <div class="form-item-wrapper flexed-item">
-            <input id="firstname" type="text" class="input" placeholder="Firstname" firstname="firstname" required>
+            <input id="firstname" type="text" class="input sign" placeholder="Firstname" firstname="firstname" required>
         </div>
         <div class="form-item-wrapper flexed-item">
-            <input id="lastname" type="text" class="input" placeholder="Lastname" name="lastname" required>
+            <input id="lastname" type="text" class="input sign" placeholder="Lastname" name="lastname" required>
         </div>
         <div class="form-item-wrapper flexed-item">
-            <input id="email" type="email" class="input" placeholder="your@email.com" name="email" required>
+            <input id="email" type="email" class="input sign" placeholder="your@email.com" name="email" required>
         </div>
         <div class="form-item-wrapper flexed-item">
-            <input id="password" type="password" class="input" placeholder="Password" name="password" required>
+            <input id="password" type="password" class="input sign" placeholder="Password" name="password" required>
         </div>
         {{#if errorMessage}}
         <div class="error-message">{{ errorMessage }}</div>

@@ -8,8 +8,21 @@ import {
 const checkBoxesZipcode = document.querySelectorAll("[name='zipcode']");
 const checkBoxesKoB = document.querySelectorAll("[name='kindofBusiness']");
 const businessContainer = document.querySelector(".list");
+const allcheckBoxes = document.querySelectorAll("[name='zipcode'], [name='kindofBusiness']")
 
 function filter(checkboxes, targetAttribute, payloadName) {
+
+  const data = {
+    business: [],
+    zipCode: []
+  }
+
+  //  query all business input, push into business array,
+  // query all zipcode input, push into zipCOde array,
+  // send obj to back
+
+
+  console.log(checkboxes)
   checkboxes.forEach(checkbox => {
     checkbox.onclick = function (event) {
       const checked = [];
@@ -22,7 +35,7 @@ function filter(checkboxes, targetAttribute, payloadName) {
       payload[payloadName] = checked;
 
       axios
-        .post(`https://circuit-court.herokuapp.com/filter-mainPage`, payload)
+        .post(`http://localhost:2000/filter-mainPage`, payload)
         .then(myAPIRes => {
           const filteredZipcode = myAPIRes.data;
           businessContainer.innerHTML = "";
@@ -79,4 +92,5 @@ function filter(checkboxes, targetAttribute, payloadName) {
 
 filter(checkBoxesZipcode, "data-zipcode", "zipcode");
 filter(checkBoxesKoB, "data-kindofBusiness", "kob");
+filter(allcheckBoxes, )
 // function replaceInnerHtml()
