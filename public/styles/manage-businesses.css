@@ -14,24 +14,6 @@ td {
     border-left: solid 1px black;
 }
 
-/* 
- .big-container,
- .create-container,
- .create-container span {
-     display: flex;
- }
-
- .create-container,
- .create-container div,
- .create-container span {
-     flex-direction: row;
-     align-items: flex-start
- }
-
- */
-
-
-
 .table-image {
     max-width: 20vw;
     max-height: 20vh;

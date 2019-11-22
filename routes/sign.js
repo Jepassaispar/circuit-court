@@ -8,13 +8,14 @@ const bcryptSalt = 10;
 router.get("/logIn", (req, res) => {
     res.render("logIn", {
         css: ["baseStyle", "mainPage", "log"],
-        js: "sign"
+        js: ["app", "script", "sign"]
     });
 });
 
 router.get("/signUp", (req, res) => {
     res.render("signUp", {
-        css: ["baseStyle", "sign"]
+        css: ["baseStyle", "sign"],
+        js: ["app", "script"]
     });
 });
 
