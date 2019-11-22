@@ -132,39 +132,28 @@ BEIGE : #FAF0E1
   margin-bottom: 10px;
 }
 
-/* Customize the label (the container) */
-/* .container {
-  display: block;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 12px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-} */
-
-
-/* #mainNav {
-  visibility: hidden;
-} */
-
-
 .test {
   width: 35px;
   height: 5px;
   background-color: black;
   margin: 6px 0;
   position: relative;
-  top: 50px;
+  top: 30px;
 }
 
 
-.zipcode,
-.kindofBusiness {
-  visibility: hidden;
 
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.background-out {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .filter {
@@ -172,29 +161,32 @@ BEIGE : #FAF0E1
   border: none
 }
 
-.kindOfBusinesses {
-  visibility: hidden;
-  position: fixed;
-  top: 110px;
-  margin-top: 350px;
-  margin-left: 9px;
+
+.sideMenuContainer {
+  position: sticky;
 }
 
-
+.kindOfBusinesses {
+  position: sticky;
+}
 
 .zipcodes {
-  position: fixed;
-  top: 20px;
-  padding: 10px;
+  margin-top: 50px;
+  position: sticky;
 }
 
 .zipcode,
 .kindofBusiness {
-  padding-top: 20px;
-
-
+  position: sticky;
+  padding: 5px;
 }
 
-.inch {
-  margin-top: 50px;
+.burgerMenuIcon {
+  position: sticky;
+  top: 30px;
+  left: 20px;
+}
+
+.burgerMenuIcon:hover {
+  cursor: pointer;
 }

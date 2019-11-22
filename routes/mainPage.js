@@ -44,13 +44,13 @@ router.post("/filter-mainPage", (req, res) => {
       });
     } else
       businessModel
-        .find({
-          "lieu.zipcode": query.zipcode
-        })
-        .then(dbRes => {
-          res.send(dbRes);
-        })
-        .catch(err => console.log(err));
+      .find({
+        "lieu.zipcode": query.zipcode
+      })
+      .then(dbRes => {
+        res.send(dbRes);
+      })
+      .catch(err => console.log(err));
   } else if (req.body.kob != undefined) {
     query.kob = req.body.kob;
     if (req.body.kob.length === 0) {
@@ -140,7 +140,7 @@ router.get("/mainPage/:id", (req, res, next) => {
       res.render("one-business", {
         business: business,
         css: ["baseStyle", "mainPage", "one-business"],
-        js: "app"
+        js: ["app", "script"]
       });
     })
     .catch(err => console.log("err"));

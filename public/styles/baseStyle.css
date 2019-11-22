@@ -108,12 +108,6 @@ Prevents blue ugly box border from appearing when user clicks
   font-size: 1.2rem;
 } */
 
-
-
-.is-active {
-  color: rgb(8, 129, 138);
-}
-
 .link:hover {
   background-color: rgb(243, 153, 5) !important;
 }
@@ -166,4 +160,8 @@ Prevents blue ugly box border from appearing when user clicks
   cursor: pointer;
   transform: scale(1.01);
   background-color: rgb(243, 153, 5);
+}
+
+.is-active {
+  color: rgb(8, 129, 138) !important;
 }
