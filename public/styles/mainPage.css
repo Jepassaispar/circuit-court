@@ -41,6 +41,9 @@ BEIGE : #FAF0E1
 
 .weekContainer {
   color: rgb(8, 129, 138);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .popup .popuptext {
@@ -95,19 +98,12 @@ BEIGE : #FAF0E1
   width: 10rem;
 }
 
-.weekContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .img-container {
   width: 60%;
 }
 
 .img {
   width: 100%;
-
 }
 
 .business {
@@ -136,57 +132,80 @@ BEIGE : #FAF0E1
   width: 35px;
   height: 5px;
   background-color: black;
-  margin: 6px 0;
-  position: relative;
   top: 30px;
 }
 
-
-
 .visible {
-  visibility: visible;
+  transition: all 1s ease-in-out;
 }
 
 .hidden {
-  visibility: hidden;
+  transition: all 1s ease-in-out;
+  transform: translateX(-100px)
+}
+
+.sideMenuContainer {
+  position: fixed !important
+}
+
+#burgerMenuIcon {
+  position: relative;
+  z-index: 10;
+  left: 10px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.test {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  left: 10px;
+  position: fixed;
+}
+
+#test0 {
+  top: 70px;
+}
+
+#test1 {
+  top: 80px;
+}
+
+#test2 {
+  top: 90px;
 }
 
 .background-out {
   height: 100vh;
+  width: 12vw;
   background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  top: 0px;
 }
 
-.filter {
-  background: none;
-  border: none
-}
-
-
-.sideMenuContainer {
-  position: sticky;
+.zipcodes,
+.kindOfBusinesses {
+  position: relative;
 }
 
 .kindOfBusinesses {
-  position: sticky;
+  position: relative;
 }
 
 .zipcodes {
-  margin-top: 50px;
-  position: sticky;
+  top: 100px;
 }
 
 .zipcode,
-.kindofBusiness {
-  position: sticky;
+.kindOfBusiness {
   padding: 5px;
 }
 
-.burgerMenuIcon {
-  position: sticky;
-  top: 30px;
-  left: 20px;
+#mainContainer {
+  z-index: 1;
 }
 
-.burgerMenuIcon:hover {
+#burgerMenuIcon:hover {
   cursor: pointer;
 }

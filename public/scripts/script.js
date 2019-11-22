@@ -1,8 +1,9 @@
 const links = document.querySelectorAll(".link");
-const btn = document.querySelector(".filter");
+const btn = document.querySelector("#burgerMenuIcon");
+console.log("coucou", btn)
 const zipcode = document.querySelectorAll(".zipcode");
 const kob = document.querySelectorAll(".kindofBusiness");
-console.log(zipcode);
+const sideBar = document.querySelector(".sideMenuContainer")
 
 for (var i = 0; i < links.length; i++) {
   if (window.location.href === links[i].href) {
@@ -11,12 +12,6 @@ for (var i = 0; i < links.length; i++) {
 }
 
 btn.onclick = function () {
-  zipcode.forEach(zip => {
-    zip.classList.toggle("visible");
-    zip.classList.toggle("hidden");
-  });
-  kob.forEach(k => {
-    k.classList.toggle("visible");
-    k.classList.toggle("hidden");
-  })
+  sideBar.classList.toggle("visible");
+  sideBar.classList.toggle("hidden");
 }

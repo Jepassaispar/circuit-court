@@ -1,15 +1,14 @@
-<button class="filter">
-    <div class="sideMenuContainer  background-out">
-        <div class="burgerMenuIcon">
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="test"></div>
-            <div class="inch"></div>
-        </div>
-
+<div id="mainContainer">
+    <div id="burgerMenuIcon">
+        <div class="test" id="test0"></div>
+        <div class="test" id="test1"></div>
+        <div class="test" id="test2"></div>
+        <div class="inch" id="test3"></div>
+    </div>
+    <div class="sideMenuContainer  background-out hidden">
         <div class="zipcodes">
             {{#each zipcodes}}
-            <div class="zipcode hidden">
+            <div class="zipcode">
                 <label for="zipcode hidden">{{this}}</label>
                 <input data-zipcode="{{this}}" type="checkbox" name="zipcode">
                 <span class="checkmark"></span>
@@ -17,52 +16,50 @@
             {{/each}}
         </div>
 
-    </div>
-    <div class="kindOfBusinesses">
-        {{#each kindOfBusinesses}}
-        <div class="kindofBusiness hidden">
-            <label for="kindofBusiness">{{this}}</label>
-            <input data-kindofBusiness="{{this}}" type="checkbox" name="kindofBusiness">
-        </div>
-        {{/each}}
-    </div>
-    </div>
-</button>
-<div class="container">
-    <div class="list">
-        {{#each businesses}}
-        <div class="fullBusiness">
-            <div class="img-container">
-                <img class="img" src="{{this.image}}" alt="coucou">
+        <div class="kindOfBusinesses">
+            {{#each kindOfBusinesses}}
+            <div class="kindOfBusiness">
+                <label for="kindofBusiness">{{this}}</label>
+                <input data-kindofBusiness="{{this}}" type="checkbox" name="kindofBusiness">
             </div>
-            <div class="business">
-                <div class="businessType">{{this.business}}</div>
-                <div class="name">{{this.name}}</div>
-                <p class="adresse">Adresse : {{this.lieu.adress}} <br> {{this.lieu.zipcode}} Paris </p>
-                <div class="popUpParentDiv">
-                    <button class="schedules popup" href="">Horaires</button>
-                    <a href="/mainPage/{{this._id}}">See more...</a>
-                    <div id="popup{{@index}}" class="popup">
-                        <span class="popuptext" id="popuptext{{@index}}">
-                            <button id="closePopUp{{@index}}" class="closePopUps">close</button>
-                            <div class="weekContainer">
-                                <li class="day"><span>Lundi : </span>{{this.ouverture.Lundi}}</li>
-                                <li class="day"><span>Mardi : </span>{{this.ouverture.Mardi}}</li>
-                                <li class="day"><span>Mercredi : </span>{{this.ouverture.Mercredi}}</li>
-                                <li class="day"><span>Jeudi : </span>{{this.ouverture.Jeudi}}</li>
-                                <li class="day"><span>Vendredi : </span>{{this.ouverture.Vendredi}}</li>
-                                <li class="day"><span>Samedi : </span>{{this.ouverture.Samedi}}</li>
-                                <li class="day"><span>Dimanche : </span>{{this.ouverture.Dimanche}}</li>
-                            </div>
-                        </span>
+            {{/each}}
+        </div>
+    </div>
+    <div class="container">
+        <div class="list">
+            {{#each businesses}}
+            <div class="fullBusiness">
+                <div class="img-container">
+                    <img class="img" src="{{this.image}}" alt="coucou">
+                </div>
+                <div class="business">
+                    <div class="businessType">{{this.business}}</div>
+                    <div class="name">{{this.name}}</div>
+                    <p class="adresse">Adresse : {{this.lieu.adress}} <br> {{this.lieu.zipcode}} Paris </p>
+                    <div class="popUpParentDiv">
+                        <button class="schedules popup" href="">Horaires</button>
+                        <a href="/mainPage/{{this._id}}">See more...</a>
+                        <div id="popup{{@index}}" class="popup">
+                            <span class="popuptext" id="popuptext{{@index}}">
+                                <button id="closePopUp{{@index}}" class="closePopUps">close</button>
+                                <div class="weekContainer">
+                                    <li class="day"><span>Lundi : </span>{{this.ouverture.Lundi}}</li>
+                                    <li class="day"><span>Mardi : </span>{{this.ouverture.Mardi}}</li>
+                                    <li class="day"><span>Mercredi : </span>{{this.ouverture.Mercredi}}</li>
+                                    <li class="day"><span>Jeudi : </span>{{this.ouverture.Jeudi}}</li>
+                                    <li class="day"><span>Vendredi : </span>{{this.ouverture.Vendredi}}</li>
+                                    <li class="day"><span>Samedi : </span>{{this.ouverture.Samedi}}</li>
+                                    <li class="day"><span>Dimanche : </span>{{this.ouverture.Dimanche}}</li>
+                                </div>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
+            {{/each}}
         </div>
-        {{/each}}
+
+        <div class="map" id="mapDisplay"></div>
+
     </div>
-
-    <div class="map" id="mapDisplay"></div>
-
-</div>
 </div>
