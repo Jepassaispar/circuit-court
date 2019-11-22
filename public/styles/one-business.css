@@ -1,3 +1,39 @@
+.container {
+    display: flex;
+    grid-template-columns: 4fr 4fr;
+}
+
 .name {
     text-align: center;
+}
+
+.coucou {
+    display: flex;
+}
+
+.maincontent {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.infoB {
+    border: solid 1px;
+}
+
+h5 {
+    text-align: center;
+    margin: 10px;
+
+}
+
+.week {
+    margin-bottom: 20px;
+}
+
+.infoB p {
+    padding: 5px;
+}
+
+.adresse {
+    margin-bottom: 20px;
 }
